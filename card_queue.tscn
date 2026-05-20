@@ -10,6 +10,10 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pgkfj"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8dbkf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sr2xh"]
+
 [node name="CardQueue" type="HBoxContainer" unique_id=870833839]
 offset_right = 1153.0
 offset_bottom = 133.0
@@ -223,6 +227,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8dbkf")
 
 [node name="AspectRatioContainer6" type="AspectRatioContainer" parent="." unique_id=283226920]
 layout_mode = 2
@@ -263,6 +268,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sr2xh")
 
 [node name="VSeparator2" type="VSeparator" parent="." unique_id=1135292173]
 layout_mode = 2

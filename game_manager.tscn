@@ -3,8 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://cwmilhyx2q6tp" path="res://card_deck.tscn" id="1_70yv6"]
 [ext_resource type="Script" uid="uid://c6j1gj5xr2jsj" path="res://game_manager.gd" id="1_smx3j"]
 [ext_resource type="PackedScene" uid="uid://d0jar4dpikg7l" path="res://card_queue.tscn" id="2_o2178"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_70yv6"]
+[ext_resource type="Script" uid="uid://ba27sa137jhjv" path="res://resources/resource_classes/card_re.gd" id="4_8jrwq"]
+[ext_resource type="Resource" uid="uid://bofsyqbh17qmj" path="res://resources/cards/breathe.tres" id="5_gth8u"]
+[ext_resource type="Resource" uid="uid://b5358l32kcioy" path="res://resources/cards/knife_toss.tres" id="6_dq8jp"]
+[ext_resource type="Resource" uid="uid://c6l8b600lm5ef" path="res://resources/cards/stealth.tres" id="7_yawsv"]
+[ext_resource type="Resource" uid="uid://cxejkpan13aem" path="res://resources/cards/take_cover.tres" id="8_le433"]
 
 [node name="GameManager" type="Control" unique_id=1580007813]
 layout_mode = 3
@@ -54,14 +57,10 @@ size_flags_stretch_ratio = 1.38
 
 [node name="Deck1" parent="MarginContainer/Layout/DeckContainer" unique_id=1367649581 instance=ExtResource("1_70yv6")]
 layout_mode = 2
-
-[node name="Button" type="Button" parent="MarginContainer/Layout/DeckContainer/Deck1" unique_id=1468676772]
-layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_70yv6")
+starting_cards = Array[ExtResource("4_8jrwq")]([ExtResource("5_gth8u"), ExtResource("5_gth8u"), ExtResource("6_dq8jp"), ExtResource("6_dq8jp"), ExtResource("6_dq8jp"), ExtResource("7_yawsv"), ExtResource("8_le433"), ExtResource("8_le433")])
+queue = NodePath("../../CardQueue")
 
 [node name="VSeparator2" type="VSeparator" parent="MarginContainer/Layout/DeckContainer" unique_id=1755384283]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.38
-
-[connection signal="pressed" from="MarginContainer/Layout/DeckContainer/Deck1/Button" to="." method="_on_button_pressed"]

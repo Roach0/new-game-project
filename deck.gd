@@ -1,21 +1,34 @@
 extends AspectRatioContainer
 
+@export var starting_cards: Array[Card] = []
+@export var queue: NodePath
 
-@onready var discards = []
-@onready var cards = []
+var cards: Array[Card] = []
+var discards: Array[Card] = []
 
 func _ready() -> void:
-	pass
+	build_deck()
 
 func _process(delta: float) -> void:
 	pass
 
-func _card_draw():
+func card_draw():
 	if cards.is_empty():
 		return {
 			"name": "cards_empty",
 			"desc": "Deck is empty"
 		}
 	var card = cards.pop_front()
-	discards.push_back(card)
+	discards.append(card)
 	return card
+	
+func build_deck():
+	for card in cards:
+		cards.append(card.duplicate())
+		
+
+
+func _on_button_pressed() -> void:
+	if queue.full == true:
+		pass
+	
