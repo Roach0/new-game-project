@@ -2,6 +2,14 @@
 
 [ext_resource type="Script" uid="uid://bg1wta0d45iiu" path="res://card_queue.gd" id="1_3ncrb"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ncrb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nx0cm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_er6vs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pgkfj"]
+
 [node name="CardQueue" type="HBoxContainer" unique_id=870833839]
 offset_right = 1153.0
 offset_bottom = 133.0
@@ -51,6 +59,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3ncrb")
 
 [node name="AspectRatioContainer2" type="AspectRatioContainer" parent="." unique_id=1781039987]
 layout_mode = 2
@@ -91,6 +100,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nx0cm")
 
 [node name="AspectRatioContainer3" type="AspectRatioContainer" parent="." unique_id=928804445]
 layout_mode = 2
@@ -131,6 +141,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_er6vs")
 
 [node name="AspectRatioContainer4" type="AspectRatioContainer" parent="." unique_id=2097262616]
 layout_mode = 2
@@ -171,6 +182,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pgkfj")
 
 [node name="AspectRatioContainer5" type="AspectRatioContainer" parent="." unique_id=51836430]
 layout_mode = 2
