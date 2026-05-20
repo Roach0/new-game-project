@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://bg1wta0d45iiu" path="res://card_queue.gd" id="1_3ncrb"]
 
 [node name="CardQueue" type="HBoxContainer" unique_id=870833839]
+offset_right = 1153.0
+offset_bottom = 133.0
 size_flags_vertical = 3
 script = ExtResource("1_3ncrb")
 
@@ -10,33 +12,245 @@ script = ExtResource("1_3ncrb")
 layout_mode = 2
 theme_override_constants/separation = 166
 
-[node name="Button1" type="Button" parent="." unique_id=229149863]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="." unique_id=2004349324]
+layout_mode = 2
+size_flags_horizontal = 3
+ratio = 0.714
+
+[node name="Panel" type="Panel" parent="AspectRatioContainer" unique_id=19051364]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Button2" type="Button" parent="." unique_id=630645078]
+[node name="Label1" type="Label" parent="AspectRatioContainer/Panel" unique_id=1537779432]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Example"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="AspectRatioContainer/Panel" unique_id=1303489857]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -72.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Example"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="AspectRatioContainer/Panel" unique_id=1400742344]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="." unique_id=1781039987]
+layout_mode = 2
+size_flags_horizontal = 3
+ratio = 0.714
+
+[node name="Panel" type="Panel" parent="AspectRatioContainer2" unique_id=876603001]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Button3" type="Button" parent="." unique_id=1473771618]
+[node name="Label1" type="Label" parent="AspectRatioContainer2/Panel" unique_id=864970844]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Example"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="AspectRatioContainer2/Panel" unique_id=715210801]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -72.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Example"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="AspectRatioContainer2/Panel" unique_id=1613982591]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AspectRatioContainer3" type="AspectRatioContainer" parent="." unique_id=928804445]
+layout_mode = 2
+size_flags_horizontal = 3
+ratio = 0.714
+
+[node name="Panel" type="Panel" parent="AspectRatioContainer3" unique_id=2093525616]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Button4" type="Button" parent="." unique_id=217590086]
+[node name="Label1" type="Label" parent="AspectRatioContainer3/Panel" unique_id=1236727594]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Example"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="AspectRatioContainer3/Panel" unique_id=2016799502]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -72.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Example"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="AspectRatioContainer3/Panel" unique_id=112840726]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AspectRatioContainer4" type="AspectRatioContainer" parent="." unique_id=2097262616]
+layout_mode = 2
+size_flags_horizontal = 3
+ratio = 0.714
+
+[node name="Panel" type="Panel" parent="AspectRatioContainer4" unique_id=350028902]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Button5" type="Button" parent="." unique_id=371402952]
+[node name="Label1" type="Label" parent="AspectRatioContainer4/Panel" unique_id=870629046]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Example"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="AspectRatioContainer4/Panel" unique_id=1126527238]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -72.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Example"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="AspectRatioContainer4/Panel" unique_id=1556567287]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AspectRatioContainer5" type="AspectRatioContainer" parent="." unique_id=51836430]
+layout_mode = 2
+size_flags_horizontal = 3
+ratio = 0.714
+
+[node name="Panel" type="Panel" parent="AspectRatioContainer5" unique_id=826334783]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Button6" type="Button" parent="." unique_id=177187638]
+[node name="Label" type="Label" parent="AspectRatioContainer5/Panel" unique_id=104792078]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Example"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="AspectRatioContainer5/Panel" unique_id=1685178842]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -72.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Example"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="AspectRatioContainer5/Panel" unique_id=670008023]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AspectRatioContainer6" type="AspectRatioContainer" parent="." unique_id=283226920]
+layout_mode = 2
+size_flags_horizontal = 3
+ratio = 0.714
+
+[node name="Panel" type="Panel" parent="AspectRatioContainer6" unique_id=1621067841]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Button7" type="Button" parent="." unique_id=2100870288]
-layout_mode = 2
-size_flags_horizontal = 3
+[node name="Label" type="Label" parent="AspectRatioContainer6/Panel" unique_id=729366205]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Example"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="AspectRatioContainer6/Panel" unique_id=1515083107]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -72.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Example"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="AspectRatioContainer6/Panel" unique_id=1191884237]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VSeparator2" type="VSeparator" parent="." unique_id=1135292173]
 layout_mode = 2
