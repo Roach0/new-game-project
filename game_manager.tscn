@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://bwi3f03vnopsn"]
+
+[ext_resource type="PackedScene" uid="uid://cwmilhyx2q6tp" path="res://card_deck.tscn" id="1_70yv6"]
+[ext_resource type="Script" uid="uid://c6j1gj5xr2jsj" path="res://game_manager.gd" id="1_smx3j"]
+[ext_resource type="PackedScene" uid="uid://d0jar4dpikg7l" path="res://card_queue.tscn" id="2_o2178"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_70yv6"]
+
+[node name="GameManager" type="Control" unique_id=1580007813]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_smx3j")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1250902012]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Layout" type="VBoxContainer" parent="MarginContainer" unique_id=1294214604]
+layout_mode = 2
+
+[node name="Encounter" type="HBoxContainer" parent="MarginContainer/Layout" unique_id=2137666669]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.28
+
+[node name="CardQueue" parent="MarginContainer/Layout" unique_id=870833839 instance=ExtResource("2_o2178")]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/Layout" unique_id=608728839]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="DeckContainer" type="HBoxContainer" parent="MarginContainer/Layout" unique_id=643053006]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/Layout/DeckContainer" unique_id=69985640]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.38
+
+[node name="Deck1" parent="MarginContainer/Layout/DeckContainer" unique_id=1367649581 instance=ExtResource("1_70yv6")]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/Layout/DeckContainer/Deck1" unique_id=1468676772]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_70yv6")
+
+[node name="VSeparator2" type="VSeparator" parent="MarginContainer/Layout/DeckContainer" unique_id=1755384283]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.38
+
+[connection signal="pressed" from="MarginContainer/Layout/DeckContainer/Deck1/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://d0jar4dpikg7l"]
+
+[ext_resource type="Script" uid="uid://bg1wta0d45iiu" path="res://card_queue.gd" id="1_3ncrb"]
+
+[node name="CardQueue" type="HBoxContainer" unique_id=870833839]
+size_flags_vertical = 3
+script = ExtResource("1_3ncrb")
+
+[node name="VSeparator" type="VSeparator" parent="." unique_id=1855819781]
+layout_mode = 2
+theme_override_constants/separation = 166
+
+[node name="Button1" type="Button" parent="." unique_id=229149863]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button2" type="Button" parent="." unique_id=630645078]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button3" type="Button" parent="." unique_id=1473771618]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button4" type="Button" parent="." unique_id=217590086]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button5" type="Button" parent="." unique_id=371402952]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button6" type="Button" parent="." unique_id=177187638]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button7" type="Button" parent="." unique_id=2100870288]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VSeparator2" type="VSeparator" parent="." unique_id=1135292173]
+layout_mode = 2
+theme_override_constants/separation = 166

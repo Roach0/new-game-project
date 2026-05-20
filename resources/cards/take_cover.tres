@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://cxejkpan13aem"]
+
+[ext_resource type="Script" uid="uid://ba27sa137jhjv" path="res://resources/resource_classes/card_re.gd" id="1_y80hp"]
+
+[resource]
+script = ExtResource("1_y80hp")
+card_name = "Take Cover!"
+description = "Find something to duck behind."
+metadata/_custom_type_script = "uid://ba27sa137jhjv"
