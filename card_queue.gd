@@ -11,7 +11,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func is_full() -> bool: 
+func is_full() -> bool:
 	return card_queue.size() >= MAX_CARDS
 
 func update_queue(action:String, card:Card = null):
@@ -26,5 +26,7 @@ func update_queue(action:String, card:Card = null):
 		pass
 
 func _on_deck_draw(Card: Variant) -> void:
+	if MissionManager.is_deck_empty:
+		print("this deck is empty")
+		return
 	update_queue("add", Card)
-	pass # Replace with function body.

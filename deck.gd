@@ -15,6 +15,7 @@ func _process(delta: float) -> void:
 
 func card_draw():
 	if cards.is_empty():
+		MissionManager.is_deck_empty = true
 		print("card draw func: Deck Empty")
 		return
 	if MissionManager.is_queue_full:
