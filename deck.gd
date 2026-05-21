@@ -13,6 +13,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+func build_deck():
+	for card in starting_cards:
+		cards.append(card.duplicate())
+		cards.shuffle()
+
 func card_draw():
 	if cards.is_empty():
 		MissionManager.is_deck_empty = true
@@ -24,11 +29,6 @@ func card_draw():
 	var card = cards.pop_front()
 	discards.append(card)
 	return card
-
-func build_deck():
-	for card in starting_cards:
-		cards.append(card.duplicate())
-		cards.shuffle()
 
 func _on_button_pressed() -> void:
 	if MissionManager.is_queue_full:

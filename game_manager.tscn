@@ -2,9 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://cwmilhyx2q6tp" path="res://card_deck.tscn" id="1_70yv6"]
 [ext_resource type="PackedScene" uid="uid://d0jar4dpikg7l" path="res://card_queue.tscn" id="2_o2178"]
-[ext_resource type="Script" uid="uid://ba27sa137jhjv" path="res://resources/resource_classes/card_re.gd" id="4_8jrwq"]
-[ext_resource type="Resource" uid="uid://bofsyqbh17qmj" path="res://resources/cards/breathe.tres" id="5_gth8u"]
-[ext_resource type="Resource" uid="uid://b5358l32kcioy" path="res://resources/cards/knife_toss.tres" id="6_dq8jp"]
+[ext_resource type="Script" uid="uid://ba27sa137jhjv" path="res://resources/resource_classes/card_resource.gd" id="4_8jrwq"]
+[ext_resource type="Resource" uid="uid://bofsyqbh17qmj" path="res://resources/card/breathe.tres" id="5_gth8u"]
+[ext_resource type="Resource" uid="uid://b5358l32kcioy" path="res://resources/card/knife_toss.tres" id="6_dq8jp"]
+[ext_resource type="Resource" uid="uid://c6l8b600lm5ef" path="res://resources/card/stealth.tres" id="6_shwjl"]
+[ext_resource type="Resource" uid="uid://cxejkpan13aem" path="res://resources/card/take_cover.tres" id="7_eakoi"]
 
 [node name="GameManager" type="Control" unique_id=1580007813]
 layout_mode = 3
@@ -53,7 +55,7 @@ size_flags_stretch_ratio = 1.38
 
 [node name="Deck1" parent="MarginContainer/Layout/DeckContainer" unique_id=1367649581 instance=ExtResource("1_70yv6")]
 layout_mode = 2
-starting_cards = Array[ExtResource("4_8jrwq")]([ExtResource("5_gth8u"), ExtResource("5_gth8u"), ExtResource("6_dq8jp"), ExtResource("6_dq8jp")])
+starting_cards = Array[ExtResource("4_8jrwq")]([ExtResource("5_gth8u"), ExtResource("5_gth8u"), ExtResource("6_dq8jp"), ExtResource("6_dq8jp"), ExtResource("6_shwjl"), ExtResource("7_eakoi"), ExtResource("7_eakoi"), ExtResource("7_eakoi"), ExtResource("6_shwjl"), ExtResource("5_gth8u")])
 
 [node name="VSeparator2" type="VSeparator" parent="MarginContainer/Layout/DeckContainer" unique_id=1755384283]
 layout_mode = 2

@@ -1,11 +1,24 @@
 extends AspectRatioContainer
+class_name QueueSlot
 
+var card_data: Card = null
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$BG/Title.text = ""
+	$BG/Description.text = ""
 
+func is_empty() -> bool:
+	return card_data == null
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func assign(data: Card) -> void:
+	card_data = data
+	$BG/Title.text = data.card_name
+	$BG/Description.text = data.description
+
+func clear() -> void:
+	card_data = null
+	$BG/Title.text = ""
+	$BG/Description.text = ""
+
+func _on_button_pressed() -> void:
+	clear()
