@@ -16,7 +16,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GameManager="*uid://dcxy0vxwon3oa"
+Global="*uid://c6j1gj5xr2jsj"
+MissionManager="*uid://c3sh3redtpkft"
 
 [physics]
 

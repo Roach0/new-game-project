@@ -15,8 +15,6 @@ grow_vertical = 2
 size_flags_horizontal = 3
 ratio = 0.714
 script = ExtResource("1_hh1e1")
-starting_cards = null
-queue = null
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1556109383]
 layout_mode = 2

@@ -56,10 +56,9 @@ size_flags_stretch_ratio = 1.38
 [node name="Deck1" parent="MarginContainer/Layout/DeckContainer" unique_id=1367649581 instance=ExtResource("1_70yv6")]
 layout_mode = 2
 starting_cards = Array[ExtResource("4_8jrwq")]([ExtResource("5_gth8u"), ExtResource("5_gth8u"), ExtResource("6_dq8jp"), ExtResource("6_dq8jp"), ExtResource("6_dq8jp"), ExtResource("7_yawsv"), ExtResource("8_le433"), ExtResource("8_le433")])
+queue = NodePath("../../CardQueue")
 
 [node name="VSeparator2" type="VSeparator" parent="MarginContainer/Layout/DeckContainer" unique_id=1755384283]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.38
-
-[connection signal="deck_draw" from="MarginContainer/Layout/DeckContainer/Deck1" to="MarginContainer/Layout/CardQueue" method="_on_deck_draw"]
