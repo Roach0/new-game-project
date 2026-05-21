@@ -4,8 +4,11 @@ extends HBoxContainer
 @onready var slots:Array[QueueSlot] = [$Slot0,$Slot1,$Slot2,$Slot3,$Slot4,$Slot5]
 
 # var card_queue: Array[Card] = []
-const MAX_SLOTS = 6
-var current_open = slots.filter(func(s): return s.is_empty()).size()
+
+func current_open():
+	return slots.filter(func(s): return s.is_empty()).size()
+func current_next():
+	return slots.filter(func(s): return s.is_empty()).front()
 
 func _ready() -> void:
 	pass
@@ -13,24 +16,26 @@ func _process(delta: float) -> void:
 	pass
 
 func is_full() -> bool:
-	return current_open >= MAX_SLOTS
+	if current_open() <= 0:
+		MissionManager.is_queue_full = true
+		return true
+	MissionManager.is_queue_full = false
+	return false
 
 func update_queue(action:String, card:Card = null, removeSlot:QueueSlot = null):
 	if action == "add":
 		if is_full():
-			print("update queue func: Queue Full")
 			return
-		var slot = current_open
+		var slot = current_next()
 		if slot:
 			slot.assign(card)
-		if is_full():
-			MissionManager.is_queue_full = true
+		is_full()
 	if action == "remove":
 		removeSlot.clear()
+		is_full()
 		return
 
 func _on_deck_draw(card:Card) -> void:
-	if MissionManager.is_deck_empty:
-		print("on deck draw: Deck Empty")
+	if is_full():
 		return
 	update_queue("add",card)
