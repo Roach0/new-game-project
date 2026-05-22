@@ -15,7 +15,8 @@ func is_full() -> bool:
 	return open_slots().is_empty()
 
 func _ready() -> void:
-	pass
+	MissionManager.card_queue = $CardQueue
+
 func _process(delta: float) -> void:
 	pass
 
