@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dv4r6xkav2518"]
+
+[ext_resource type="Script" uid="uid://cl6k0oivbjbjg" path="res://encounter.gd" id="1_ubu8l"]
+
+[node name="Encounter" type="HBoxContainer" unique_id=1188390552]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.28
+script = ExtResource("1_ubu8l")
+
+[node name="Panel" type="Panel" parent="." unique_id=311943350]
+layout_mode = 2
+
+[node name="Panel2" type="Panel" parent="." unique_id=205999342]
+layout_mode = 2
+
+[node name="Panel3" type="Panel" parent="." unique_id=1840404846]
+layout_mode = 2
+
+[node name="Panel4" type="Panel" parent="." unique_id=721298729]
+layout_mode = 2
+
+[node name="Panel5" type="Panel" parent="." unique_id=65597414]
+layout_mode = 2
+
+[node name="Panel6" type="Panel" parent="." unique_id=234771564]
+layout_mode = 2

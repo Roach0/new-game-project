@@ -5,28 +5,27 @@ extends HBoxContainer
 
 # var card_queue: Array[Card] = []
 
-func current_open():
-	return slots.filter(func(s): return s.is_empty()).size()
-func current_next():
-	return slots.filter(func(s): return s.is_empty()).front()
+func open_slots() -> Array:
+	return slots.filter(func(s): return s.is_empty())
+
+func next_open_slot() -> QueueSlot:
+	return open_slots().front()  # returns null if none available
+
+func is_full() -> bool:
+	return open_slots().is_empty()
 
 func _ready() -> void:
 	pass
 func _process(delta: float) -> void:
 	pass
 
-func is_full() -> bool:
-	if current_open() <= 0:
-		MissionManager.is_queue_full = true
-		return true
-	MissionManager.is_queue_full = false
-	return false
+
 
 func update_queue(action:String, card:Card = null, removeSlot:QueueSlot = null):
 	if action == "add":
 		if is_full():
 			return
-		var slot = current_next()
+		var slot = next_open_slot()
 		if slot:
 			slot.assign(card)
 		is_full()

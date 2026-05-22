@@ -1,14 +1,20 @@
 [gd_scene format=3 uid="uid://bwi3f03vnopsn"]
 
+[ext_resource type="PackedScene" uid="uid://dv4r6xkav2518" path="res://encounter.tscn" id="1_8jrwq"]
 [ext_resource type="PackedScene" uid="uid://cwmilhyx2q6tp" path="res://card_deck.tscn" id="1_70yv6"]
+[ext_resource type="Script" uid="uid://ig8sava42vh3" path="res://resources/resource_classes/encounter_entities.gd" id="2_2tadr"]
 [ext_resource type="PackedScene" uid="uid://d0jar4dpikg7l" path="res://card_queue.tscn" id="2_o2178"]
+[ext_resource type="Resource" uid="uid://c7njbkbnd05cl" path="res://resources/encounter_entity/tripwire.tres" id="3_tmn8n"]
 [ext_resource type="Script" uid="uid://ba27sa137jhjv" path="res://resources/resource_classes/card_resource.gd" id="4_8jrwq"]
+[ext_resource type="Resource" uid="uid://b40kilx1tmkpg" path="res://resources/encounter_entity/guard.tres" id="4_es4nv"]
+[ext_resource type="Resource" uid="uid://c2rl6ihvjesdc" path="res://resources/encounter_entity/tall_grass.tres" id="5_anra8"]
 [ext_resource type="Resource" uid="uid://bofsyqbh17qmj" path="res://resources/card/breathe.tres" id="5_gth8u"]
 [ext_resource type="Resource" uid="uid://b5358l32kcioy" path="res://resources/card/knife_toss.tres" id="6_dq8jp"]
+[ext_resource type="Resource" uid="uid://dxqlhk6d58as7" path="res://resources/encounter_entity/tree.tres" id="6_f0lch"]
 [ext_resource type="Resource" uid="uid://c6l8b600lm5ef" path="res://resources/card/stealth.tres" id="6_shwjl"]
 [ext_resource type="Resource" uid="uid://cxejkpan13aem" path="res://resources/card/take_cover.tres" id="7_eakoi"]
 
-[node name="GameManager" type="Control" unique_id=1580007813]
+[node name="MissionManager" type="Control" unique_id=1580007813]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,10 +37,15 @@ theme_override_constants/margin_bottom = 10
 [node name="Layout" type="VBoxContainer" parent="MarginContainer" unique_id=1294214604]
 layout_mode = 2
 
-[node name="Encounter" type="HBoxContainer" parent="MarginContainer/Layout" unique_id=2137666669]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Layout" unique_id=26561254]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 2.28
+size_flags_stretch_ratio = 2.38
+theme_override_constants/margin_bottom = 12
+
+[node name="Encounter" parent="MarginContainer/Layout/MarginContainer" unique_id=1188390552 instance=ExtResource("1_8jrwq")]
+layout_mode = 2
+entities = Array[ExtResource("2_2tadr")]([ExtResource("3_tmn8n"), ExtResource("4_es4nv"), ExtResource("4_es4nv"), ExtResource("5_anra8"), ExtResource("5_anra8"), ExtResource("5_anra8"), ExtResource("5_anra8"), ExtResource("5_anra8"), ExtResource("6_f0lch"), ExtResource("6_f0lch"), ExtResource("6_f0lch"), ExtResource("6_f0lch"), ExtResource("6_f0lch"), ExtResource("5_anra8"), ExtResource("5_anra8"), ExtResource("5_anra8")])
 
 [node name="CardQueue" parent="MarginContainer/Layout" unique_id=870833839 instance=ExtResource("2_o2178")]
 layout_mode = 2

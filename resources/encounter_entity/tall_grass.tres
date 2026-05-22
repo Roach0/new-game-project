@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="EncounterEntity" format=3 uid="uid://c2rl6ihvjesdc"]
+
+[ext_resource type="Script" uid="uid://ig8sava42vh3" path="res://resources/resource_classes/encounter_entities.gd" id="1_v5uwc"]
+
+[resource]
+script = ExtResource("1_v5uwc")
+name = "Tall Grass"
+metadata/_custom_type_script = "uid://ig8sava42vh3"
