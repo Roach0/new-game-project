@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bgwjo4j7c1ikg"]
+
+[ext_resource type="Script" uid="uid://dr8flc2cldnnj" path="res://components/viewport/character_viewport.gd" id="1_lxdhd"]
+[ext_resource type="Shader" uid="uid://jg30hx80gypn" path="res://components/viewport/character_viewport.gdshader" id="2_ybkdk"]
+[ext_resource type="PackedScene" uid="uid://drsf7nnqpb6py" path="res://components/viewport/character_model.tscn" id="3_r6de8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6anv3"]
+shader = ExtResource("2_ybkdk")
+shader_parameter/pixel_size = 6.0
+
+[node name="CharacterViewport" type="SubViewportContainer" unique_id=211688815]
+material = SubResource("ShaderMaterial_6anv3")
+clip_contents = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+stretch = true
+script = ExtResource("1_lxdhd")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=614762584]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=311992331]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9298415, 1.7760599)
+projection = 1
+size = 2.1167061
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport" unique_id=1960965129]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7314566, 2.1202202, 0)
+
+[node name="CharacterModel" parent="SubViewport" unique_id=430194858 instance=ExtResource("3_r6de8")]
