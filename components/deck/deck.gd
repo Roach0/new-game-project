@@ -31,7 +31,7 @@ func card_draw():
 	return card
 
 func _on_button_pressed() -> void:
-	if MissionManager.is_queue_full:
-		print("deck button press : Queue is full")
+	var card = card_draw()  # Let card_draw handle all guards
+	if card == null:
 		return
-	deck_draw.emit(card_draw())
+	deck_draw.emit(card)
