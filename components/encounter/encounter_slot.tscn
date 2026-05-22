@@ -17,32 +17,23 @@ script = ExtResource("1_47bcl")
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Title" type="Label" parent="BG" unique_id=2054479039]
+[node name="VBoxContainer" type="VBoxContainer" parent="BG" unique_id=1098233151]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -48.0
-offset_right = 48.0
-offset_bottom = 23.0
-grow_horizontal = 2
-text = "entity_name"
-
-[node name="State" type="Label" parent="BG" unique_id=1205841483]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -23.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="BG/VBoxContainer" unique_id=2054479039]
+layout_mode = 2
+text = "entity_name"
+
+[node name="Character_Viewport" parent="BG/VBoxContainer" unique_id=211688815 instance=ExtResource("2_hmuw5")]
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 3
+
+[node name="State" type="Label" parent="BG/VBoxContainer" unique_id=1205841483]
+layout_mode = 2
 text = "State"
-
-[node name="Character_Viewport" parent="BG" unique_id=211688815 instance=ExtResource("2_hmuw5")]
-layout_mode = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="BG" unique_id=1098233151]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0

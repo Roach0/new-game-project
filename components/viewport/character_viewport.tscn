@@ -7,19 +7,14 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6anv3"]
 shader = ExtResource("2_ybkdk")
 shader_parameter/pixel_size = 6.0
+shader_parameter/base_resolution = Vector2(512, 512)
 
 [node name="CharacterViewport" type="SubViewportContainer" unique_id=211688815]
 material = SubResource("ShaderMaterial_6anv3")
 clip_contents = true
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -256.0
-offset_top = -256.0
-offset_right = 256.0
-offset_bottom = 256.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -31,6 +26,7 @@ script = ExtResource("1_lxdhd")
 own_world_3d = true
 transparent_bg = true
 handle_input_locally = false
+size = Vector2i(1152, 648)
 render_target_update_mode = 4
 
 [node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=311992331]

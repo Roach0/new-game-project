@@ -2,8 +2,8 @@ extends AspectRatioContainer
 class_name EncounterSlot
 
 
-@onready var title = $BG/Title
-@onready var state = $BG/State
+@onready var title = $BG/VBoxContainer/Title
+@onready var state = $BG/VBoxContainer/State
 var encounter_type: EncounterEntity = null
 
 func _ready() -> void:
@@ -21,8 +21,8 @@ func assign(data: EncounterEntity) -> void:
 
 func clear() -> void:
 	encounter_type = null
-	$BG/Title.text = ""
-	$BG/State.text = ""
+	$BG/VBoxContainer/Title.text = ""
+	$BG/VBoxContainer/State.text = ""
 
 func _on_button_pressed() -> void:
 	clear()
