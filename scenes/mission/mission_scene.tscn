@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bwi3f03vnopsn"]
 
 [ext_resource type="PackedScene" uid="uid://dv4r6xkav2518" path="res://components/encounter/encounter.tscn" id="1_65ttt"]
+[ext_resource type="Script" uid="uid://c0ttsq4xnv7r3" path="res://scenes/mission/mission_scene.gd" id="1_fmubs"]
 [ext_resource type="PackedScene" uid="uid://d0jar4dpikg7l" path="res://components/queue/card_queue.tscn" id="2_fmubs"]
 [ext_resource type="PackedScene" uid="uid://cwmilhyx2q6tp" path="res://components/deck/card_deck.tscn" id="3_fqky2"]
 [ext_resource type="Script" uid="uid://ba27sa137jhjv" path="res://resources/resource_classes/card_resource.gd" id="4_qrvuc"]
@@ -16,6 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_fmubs")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1250902012]
 layout_mode = 1
