@@ -55,7 +55,7 @@ size_flags_stretch_ratio = 0.1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VSeparator" type="VSeparator" parent="MarginContainer/Layout/DeckContainer" unique_id=69985640]
+[node name="s1" type="VSeparator" parent="MarginContainer/Layout/DeckContainer" unique_id=69985640]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.38
@@ -64,7 +64,7 @@ size_flags_stretch_ratio = 1.38
 layout_mode = 2
 starting_cards = Array[ExtResource("4_qrvuc")]([ExtResource("5_66ukh"), ExtResource("5_66ukh"), ExtResource("6_204gf"), ExtResource("6_204gf"), ExtResource("7_brwp2"), ExtResource("8_jtubb"), ExtResource("8_jtubb"), ExtResource("8_jtubb"), ExtResource("7_brwp2"), ExtResource("5_66ukh")])
 
-[node name="VSeparator2" type="VSeparator" parent="MarginContainer/Layout/DeckContainer" unique_id=1755384283]
+[node name="s2" type="VSeparator" parent="MarginContainer/Layout/DeckContainer" unique_id=1755384283]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.38

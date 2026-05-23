@@ -37,6 +37,7 @@ func draw_card() -> Card:
 	cards_count.text = str(cards.size())
 	return card
 func discard(card:Card):
+	print("ive been called")
 	discards.append(card)
 	discards_count.text = str(discards.size())
 func redraw():

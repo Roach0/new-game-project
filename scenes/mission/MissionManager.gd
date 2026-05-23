@@ -6,7 +6,7 @@ var is_deck_empty: bool = false
 
 func _ready():
 	deck.draw_request.connect(_on_draw_request)
-	queue.discard_request.connect(_on_discard)
+	queue.discard.connect(_on_discard)
 
 # queries
 func is_queue_full() -> bool:
