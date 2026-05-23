@@ -33,7 +33,7 @@ func draw_card() -> Card:
 		deck_empty.emit() #for later message n stuff
 		print("deck:empty")
 		return null
-	var card = cards.pop_front()
+	var card = cards.pop_back()
 	cards_count = cards.size #temorary
 	return card
 func redraw():
