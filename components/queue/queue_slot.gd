@@ -27,5 +27,7 @@ func clear() -> void:
 	$BG/Description.text = ""
 
 func _on_button_pressed() -> void:
+	if card == null:
+		return
 	discard_request.emit(card)
 	clear()

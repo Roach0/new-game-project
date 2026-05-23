@@ -2,6 +2,7 @@ class_name Deck
 extends AspectRatioContainer
 
 @export var starting_cards: Array[Card] = []
+@export var deck_id: String = "Default"
 
 @onready var cards_count = $PanelContainer/MarginContainer/Panel/Draw
 @onready var discards_count = $PanelContainer/MarginContainer/Panel/Discard

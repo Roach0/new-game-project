@@ -1,3 +1,4 @@
 extends Control
 
-# Global Variables
+# Scene Setups
+var current_decks = {}
