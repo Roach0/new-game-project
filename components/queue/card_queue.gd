@@ -30,6 +30,5 @@ func add_card(card: Card) -> void:
 		slot.assign(card)
 
 # handlers
-func _on_slot_discard_request(slot: QueueSlot, card: Card) -> void:
+func _on_slot_discard_request(card: Card) -> void:
 	discard.emit(card)
-	slot.clear()
