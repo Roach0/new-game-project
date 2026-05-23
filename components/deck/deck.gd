@@ -3,6 +3,9 @@ extends AspectRatioContainer
 
 @export var starting_cards: Array[Card] = []
 
+@onready var cards_count = $PanelContainer/MarginContainer/Panel/Draw
+@onready var discards_count = $PanelContainer/MarginContainer/Panel/Discard
+
 signal deck_empty
 signal draw_request
 
@@ -10,7 +13,7 @@ var cards: Array[Card] = []
 var discards: Array[Card] = []
 
 func _ready() -> void:
-	var 
+
 	build_deck()
 func _process(delta: float) -> void:
 	pass
@@ -23,13 +26,15 @@ func is_empty() ->  bool:
 func build_deck():
 	for card in starting_cards:
 		cards.append(card.duplicate())
+	cards_count.text = str(cards.size())
 	cards.shuffle()
 func draw_card() -> Card:
 	if cards.is_empty():
-		deck_empty.emit()
+		deck_empty.emit() #for later message n stuff
 		print("deck:empty")
 		return null
 	var card = cards.pop_front()
+	cards_count = cards.size #temorary
 	return card
 func redraw():
 	pass #unfinished
