@@ -16,18 +16,17 @@ func next_open_slot() -> QueueSlot:
 func is_full() -> bool:
 	return open_slots().is_empty()
 
-func update_queue(action:String, card:Card = null, removeSlot:QueueSlot = null):
-	if action == "add":
-		if is_full():
-			return
-		var slot = next_open_slot()
-		if slot:
-			slot.assign(card)
-		is_full()
-	if action == "remove":
-		removeSlot.clear()
-		is_full()
+func add_card(card: Card) -> void:
+	if is_full():
 		return
+	var slot = next_open_slot()
+	if slot:
+		slot.assign(card)
+		MissionManager.is_queue_full = is_full()
+
+func remove_card(slot: QueueSlot) -> void:
+	slot.clear()
+	MissionManager.is_queue_full = is_full()
 
 func _on_deck_draw(card:Card) -> void:
 	if is_full():
