@@ -6,6 +6,7 @@ var is_deck_empty: bool = false
 
 func _ready():
 	deck.draw_request.connect(_on_draw_request)
+	queue.discard.connect(_on_discard)
 
 # queries
 func is_queue_full() -> bool:
@@ -14,10 +15,11 @@ func is_queue_full() -> bool:
 		return false
 	return queue.is_full()
 
-# methods
+# handlers
 func _on_draw_request(): # later we use this send deck id, for multi deck scaling.
 	if is_queue_full():
-		print("manager: queue is full")
 		return
 	var card = deck.draw_card() # removes card from deck to here
 	queue.add_card(card)
+func _on_discard(card:Card):
+	deck.discards.append(card)

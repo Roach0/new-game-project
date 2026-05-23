@@ -9,22 +9,21 @@ signal draw_request
 var cards: Array[Card] = []
 var discards: Array[Card] = []
 
-# queries
-func is_empty() ->  bool:
-	return cards.is_empty()
-
-# starter Pkmn
 func _ready() -> void:
+	var 
 	build_deck()
 func _process(delta: float) -> void:
 	pass
 
-# meth
+# queries
+func is_empty() ->  bool:
+	return cards.is_empty()
+
+# methods
 func build_deck():
 	for card in starting_cards:
 		cards.append(card.duplicate())
 	cards.shuffle()
-
 func draw_card() -> Card:
 	if cards.is_empty():
 		deck_empty.emit()
@@ -32,10 +31,9 @@ func draw_card() -> Card:
 		return null
 	var card = cards.pop_front()
 	return card
+func redraw():
+	pass #unfinished
 
-# inputs
+# handlers
 func _on_button_pressed() -> void:
 	draw_request.emit()
-
-func redraw(): #unfinished
-	pass

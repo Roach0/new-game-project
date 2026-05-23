@@ -4,12 +4,15 @@ extends HBoxContainer
 @onready var slots:Array[QueueSlot] = [$Slot0,$Slot1,$Slot2,$Slot3,$Slot4,$Slot5]
 
 signal queue_is_full
+signal discard
 
 func _ready() -> void:
-	pass
+	for slot in slots:
+		slot.discard_request.connect(_on_slot_discard_request)
 func _process(delta: float) -> void:
 	pass
 
+# queries
 func open_slots() -> Array:
 	return slots.filter(func(s): return s.is_empty())
 func next_open_slot() -> QueueSlot:
@@ -17,6 +20,7 @@ func next_open_slot() -> QueueSlot:
 func is_full() -> bool:
 	return open_slots().is_empty()
 
+# methods
 func add_card(card: Card) -> void:
 	if is_full():
 		queue_is_full.emit()
@@ -25,5 +29,7 @@ func add_card(card: Card) -> void:
 	if slot:
 		slot.assign(card)
 
-func remove_card(slot: QueueSlot) -> void:
+# handlers
+func _on_slot_discard_request(slot: QueueSlot, card: Card) -> void:
+	discard.emit(card)
 	slot.clear()
