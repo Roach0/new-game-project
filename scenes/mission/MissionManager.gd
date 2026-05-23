@@ -6,5 +6,6 @@ var is_deck_empty: bool = false
 
 func is_queue_full() -> bool:
 	if card_queue == null:
+		print("MissionManager: queue is null")
 		return false
 	return card_queue.is_full()

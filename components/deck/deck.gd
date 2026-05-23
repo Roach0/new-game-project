@@ -3,6 +3,8 @@ extends AspectRatioContainer
 
 @export var starting_cards: Array[Card] = []
 signal deck_draw(Card)
+signal deck_empty
+signal deck_setup
 
 var cards: Array[Card] = []
 var discards: Array[Card] = []
@@ -20,11 +22,11 @@ func build_deck():
 
 func card_draw():
 	if cards.is_empty():
-		MissionManager.is_deck_empty = true
-		print("card draw func: Deck Empty")
+		deck_empty.emit(true)
+		print("Deck: Deck Empty")
 		return
-	if MissionManager.is_queue_full:
-		print("card draw func : Queue is full")
+	if MissionManager.is_queue_full():
+		print("Deck: Queue is full")
 		return
 	var card = cards.pop_front()
 	discards.append(card)
@@ -35,3 +37,7 @@ func _on_button_pressed() -> void:
 	if card == null:
 		return
 	deck_draw.emit(card)
+
+func redraw():
+	deck_empty.emit(false)
+	pass

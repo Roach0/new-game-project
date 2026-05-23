@@ -3,22 +3,16 @@ extends HBoxContainer
 
 @onready var slots:Array[QueueSlot] = [$Slot0,$Slot1,$Slot2,$Slot3,$Slot4,$Slot5]
 
-# var card_queue: Array[Card] = []
-
-
-
 func _ready() -> void:
-	MissionManager.card_queue = $CardQueue
+	MissionManager.card_queue = $CardQueue # self assignment to scene
 
 func _process(delta: float) -> void:
 	pass
 
 func open_slots() -> Array:
 	return slots.filter(func(s): return s.is_empty())
-
 func next_open_slot() -> QueueSlot:
 	return open_slots().front()  # returns null if none available
-
 func is_full() -> bool:
 	return open_slots().is_empty()
 
