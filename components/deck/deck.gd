@@ -2,24 +2,29 @@ class_name Deck
 extends AspectRatioContainer
 
 @export var starting_cards: Array[Card] = []
-signal deck_draw(Card)
+
+signal send_card(Card)
 signal deck_empty
-signal deck_setup
+signal queue_check_request
 
 var cards: Array[Card] = []
 var discards: Array[Card] = []
 
+# queries
+func is_empty() ->  bool:
+	return cards.is_empty()
+
+# starter Pkmn
 func _ready() -> void:
 	build_deck()
-
 func _process(delta: float) -> void:
 	pass
 
+# meth
 func build_deck():
 	for card in starting_cards:
 		cards.append(card.duplicate())
 		cards.shuffle()
-
 func draw_card():
 	if cards.is_empty():
 		deck_empty.emit()
@@ -28,12 +33,12 @@ func draw_card():
 	discards.append(card)
 	return card
 
+# inputs
 func _on_button_pressed() -> void:
-	var card = draw_card()
-	if card == null:
+	if is_empty():
+		deck_empty.emit()
 		return
-	deck_draw.emit(card)
+	queue_check_request.emit()
 
-func redraw():
-	deck_empty.emit(false)
+func redraw(): #unfinished
 	pass
