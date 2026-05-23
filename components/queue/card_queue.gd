@@ -27,7 +27,3 @@ func add_card(card: Card) -> void:
 
 func remove_card(slot: QueueSlot) -> void:
 	slot.clear()
-
-func _on_deck_draw(card:Card) -> void:
-	if is_full():
-		return

@@ -68,5 +68,3 @@ starting_cards = Array[ExtResource("4_qrvuc")]([ExtResource("5_66ukh"), ExtResou
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.38
-
-[connection signal="deck_draw" from="MarginContainer/Layout/DeckContainer/Deck1" to="MarginContainer/Layout/CardQueue" method="_on_deck_draw"]
