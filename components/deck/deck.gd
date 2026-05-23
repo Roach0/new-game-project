@@ -5,7 +5,7 @@ extends AspectRatioContainer
 
 signal send_card(Card)
 signal deck_empty
-signal queue_check_request
+signal draw_request
 
 var cards: Array[Card] = []
 var discards: Array[Card] = []
@@ -38,7 +38,7 @@ func _on_button_pressed() -> void:
 	if is_empty():
 		deck_empty.emit()
 		return
-	queue_check_request.emit()
+	draw_request.emit()
 
 func redraw(): #unfinished
 	pass

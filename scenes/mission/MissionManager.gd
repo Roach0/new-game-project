@@ -12,3 +12,8 @@ func is_queue_full() -> bool:
 		print("MissionManager: queue is null")
 		return false
 	return card_queue.is_full()
+
+func card_draw_to_queue():
+	pass
+
+fun _on
