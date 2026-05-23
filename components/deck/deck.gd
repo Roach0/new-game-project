@@ -20,20 +20,16 @@ func build_deck():
 		cards.append(card.duplicate())
 		cards.shuffle()
 
-func card_draw():
+func draw_card():
 	if cards.is_empty():
-		deck_empty.emit(true)
-		print("Deck: Deck Empty")
-		return
-	if MissionManager.is_queue_full():
-		print("Deck: Queue is full")
+		deck_empty.emit()
 		return
 	var card = cards.pop_front()
 	discards.append(card)
 	return card
 
 func _on_button_pressed() -> void:
-	var card = card_draw()  # Let card_draw handle all guards
+	var card = draw_card()
 	if card == null:
 		return
 	deck_draw.emit(card)

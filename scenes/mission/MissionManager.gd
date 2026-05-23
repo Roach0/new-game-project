@@ -1,8 +1,11 @@
 extends Node
 
-var deck: Deck = null
-var card_queue: CardQueue = null  # set this on scene load
+@onready var deck: Deck = $MarginContainer/Layout/DeckContainer/Deck1
+@onready var card_queue: CardQueue = $MarginContainer/Layout/CardQueue
 var is_deck_empty: bool = false
+
+func ready():
+	pass
 
 func is_queue_full() -> bool:
 	if card_queue == null:

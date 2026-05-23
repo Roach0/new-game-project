@@ -2,8 +2,6 @@
 
 [ext_resource type="Script" uid="uid://crn4buxel1gn8" path="res://components/deck/deck.gd" id="1_hh1e1"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bprlp"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hh1e1"]
 
 [node name="CardDeck" type="AspectRatioContainer" unique_id=1367649581]
@@ -49,17 +47,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="Button" type="Button" parent="PanelContainer/MarginContainer/Panel" unique_id=74850484]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_bprlp")
-
-[node name="Button" type="Button" parent="." unique_id=1779034189]
+[node name="DrawButton" type="Button" parent="." unique_id=1779034189]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_hh1e1")
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="DrawButton" to="." method="_on_button_pressed"]

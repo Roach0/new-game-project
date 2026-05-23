@@ -3,9 +3,10 @@ extends HBoxContainer
 
 @onready var slots:Array[QueueSlot] = [$Slot0,$Slot1,$Slot2,$Slot3,$Slot4,$Slot5]
 
-func _ready() -> void:
-	MissionManager.card_queue = $CardQueue # self assignment to scene
+signal queue_is_full
 
+func _ready() -> void:
+	pass
 func _process(delta: float) -> void:
 	pass
 
@@ -18,17 +19,15 @@ func is_full() -> bool:
 
 func add_card(card: Card) -> void:
 	if is_full():
+		queue_is_full.emit()
 		return
 	var slot = next_open_slot()
 	if slot:
 		slot.assign(card)
-		MissionManager.is_queue_full = is_full()
 
 func remove_card(slot: QueueSlot) -> void:
 	slot.clear()
-	MissionManager.is_queue_full = is_full()
 
 func _on_deck_draw(card:Card) -> void:
 	if is_full():
 		return
-	update_queue("add",card)
