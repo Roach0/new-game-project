@@ -6,7 +6,7 @@ class_name QueueSlot
 @onready var description = $BG/Description
 var card: Card = null
 
-signal discard_request(card)
+signal discard_request(card:Card)
 
 func _ready() -> void:
 	clear()

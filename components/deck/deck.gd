@@ -13,7 +13,6 @@ var cards: Array[Card] = []
 var discards: Array[Card] = []
 
 func _ready() -> void:
-
 	build_deck()
 func _process(delta: float) -> void:
 	pass
@@ -27,6 +26,7 @@ func build_deck():
 	for card in starting_cards:
 		cards.append(card.duplicate())
 	cards_count.text = str(cards.size())
+	discards_count.text = str(discards.size())
 	cards.shuffle()
 func draw_card() -> Card:
 	if cards.is_empty():
@@ -34,8 +34,11 @@ func draw_card() -> Card:
 		print("deck:empty")
 		return null
 	var card = cards.pop_back()
-	cards_count = cards.size #temorary
+	cards_count.text = str(cards.size())
 	return card
+func discard(card:Card):
+	discards.append(card)
+	discards_count.text = str(discards.size())
 func redraw():
 	pass #unfinished
 

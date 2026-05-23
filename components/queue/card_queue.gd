@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 func open_slots() -> Array:
 	return slots.filter(func(s): return s.is_empty())
 func next_open_slot() -> QueueSlot:
-	return open_slots().front()  # returns null if none available
+	return open_slots().front()
 func is_full() -> bool:
 	return open_slots().is_empty()
 
