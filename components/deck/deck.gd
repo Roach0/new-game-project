@@ -15,8 +15,6 @@ var discards: Array[Card] = []
 
 func _ready() -> void:
 	build_deck()
-func _process(delta: float) -> void:
-	pass
 
 # queries
 func is_empty() ->  bool:

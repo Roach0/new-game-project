@@ -15,6 +15,10 @@ func is_queue_full() -> bool:
 		return false
 	return queue.is_full()
 
+# methods
+func register_deck() -> void:
+	
+
 # handlers
 func _on_draw_request(): # later we use this send deck id, for multi deck scaling.
 	if is_queue_full():

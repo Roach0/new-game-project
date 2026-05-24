@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://sdqya7k7ecd3"]
 
+[ext_resource type="Script" uid="uid://burbyi1w4abcq" path="res://scenes/main_menu/main_menu_manager.gd" id="1_fsom3"]
+
 [node name="MainMenu" type="Control" unique_id=2022794378]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_fsom3")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1105799172]
 layout_mode = 1
@@ -70,3 +73,5 @@ grow_vertical = 2
 text = "Settings"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]

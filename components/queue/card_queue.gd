@@ -9,8 +9,6 @@ signal discard
 func _ready() -> void:
 	for slot in slots:
 		slot.discard_request.connect(_on_slot_discard_request)
-func _process(delta: float) -> void:
-	pass
 
 # queries
 func open_slots() -> Array:
