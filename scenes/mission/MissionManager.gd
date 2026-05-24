@@ -1,8 +1,7 @@
 extends Node
 
-@onready var deck: Deck = $MarginContainer/Layout/DeckContainer/Deck1
+@onready var deck: Deck = $"MarginContainer/Layout/PlayerPanel/DeckContainer/Deck1"
 @onready var queue: CardQueue = $MarginContainer/Layout/CardQueue
-var is_deck_empty: bool = false
 
 func _ready():
 	deck.draw_request.connect(_on_draw_request)

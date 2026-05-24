@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dv4r6xkav2518"]
 
-[ext_resource type="PackedScene" uid="uid://bdefg3a1orjh3" path="res://components/encounter/encounter_slot.tscn" id="1_d30m6"]
+[ext_resource type="PackedScene" uid="uid://bdefg3a1orjh3" path="res://components/character_view/character_view.tscn" id="1_d30m6"]
 
 [node name="Encounter" type="VBoxContainer" unique_id=1512536903]
 anchors_preset = 15

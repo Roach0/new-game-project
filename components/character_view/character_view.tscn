@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bdefg3a1orjh3"]
 
-[ext_resource type="Script" uid="uid://ckphs26uw8nk0" path="res://components/encounter/encounter_slot.gd" id="1_47bcl"]
-[ext_resource type="PackedScene" uid="uid://bgwjo4j7c1ikg" path="res://components/viewport/character_viewport.tscn" id="2_hmuw5"]
+[ext_resource type="Script" uid="uid://ckphs26uw8nk0" path="res://components/character_view/character_view.gd" id="1_djhrw"]
+[ext_resource type="PackedScene" uid="uid://bgwjo4j7c1ikg" path="res://components/viewport/character_viewport.tscn" id="2_0ol8i"]
 
 [node name="EncounterSlot" type="AspectRatioContainer" unique_id=843730563]
 clip_contents = true
@@ -11,7 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
-script = ExtResource("1_47bcl")
+script = ExtResource("1_djhrw")
 
 [node name="BG" type="Panel" parent="." unique_id=2105771203]
 layout_mode = 2
@@ -29,7 +29,7 @@ grow_vertical = 2
 layout_mode = 2
 text = "entity_name"
 
-[node name="Character_Viewport" parent="BG/VBoxContainer" unique_id=211688815 instance=ExtResource("2_hmuw5")]
+[node name="Character_Viewport" parent="BG/VBoxContainer" unique_id=211688815 instance=ExtResource("2_0ol8i")]
 layout_mode = 2
 size_flags_horizontal = 1
 size_flags_vertical = 3
