@@ -1,5 +1,5 @@
 extends Resource
-class_name Card
+class_name CardResource
 
 @export var card_name:String = ""
 @export var description:String = ""

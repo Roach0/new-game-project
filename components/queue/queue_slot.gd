@@ -4,9 +4,9 @@ class_name QueueSlot
 
 @onready var title = $BG/Title
 @onready var description = $BG/Description
-var card: Card = null
+var card: CardResource = null
 
-signal discard_request(card: Card)
+signal discard_request(card: CardResource)
 
 func _ready() -> void:
 	clear()
@@ -14,7 +14,7 @@ func _ready() -> void:
 func is_empty() -> bool:
 	return card == null
 
-func assign(data: Card) -> void:
+func assign(data: CardResource) -> void:
 	if data == null:
 		return
 	card = data

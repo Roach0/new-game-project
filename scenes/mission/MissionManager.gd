@@ -17,7 +17,7 @@ func is_queue_full() -> bool:
 
 # methods
 func register_deck() -> void:
-	
+	pass
 
 # handlers
 func _on_draw_request(): # later we use this send deck id, for multi deck scaling.
@@ -25,6 +25,6 @@ func _on_draw_request(): # later we use this send deck id, for multi deck scalin
 		return
 	var card = deck.draw_card() # removes card from deck to here
 	queue.add_card(card)
-func _on_discard(card:Card):
+func _on_discard(card: CardResource):
 	print("this is happening")
 	deck.discard(card)

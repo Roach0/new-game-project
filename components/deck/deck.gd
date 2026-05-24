@@ -1,7 +1,7 @@
 class_name Deck
 extends AspectRatioContainer
 
-@export var starting_cards: Array[Card] = []
+@export var starting_cards: Array[CardResource] = []
 @export var deck_id: String = "Default"
 
 @onready var cards_count = $PanelContainer/MarginContainer/Panel/Draw
@@ -10,8 +10,8 @@ extends AspectRatioContainer
 signal deck_empty
 signal draw_request
 
-var cards: Array[Card] = []
-var discards: Array[Card] = []
+var cards: Array[CardResource] = []
+var discards: Array[CardResource] = []
 
 func _ready() -> void:
 	build_deck()
@@ -27,7 +27,7 @@ func build_deck():
 	cards_count.text = str(cards.size())
 	discards_count.text = str(discards.size())
 	cards.shuffle()
-func draw_card() -> Card:
+func draw_card() -> CardResource:
 	if cards.is_empty():
 		deck_empty.emit() #for later message n stuff
 		print("deck:empty")
@@ -35,7 +35,7 @@ func draw_card() -> Card:
 	var card = cards.pop_back()
 	cards_count.text = str(cards.size())
 	return card
-func discard(card:Card):
+func discard(card:CardResource):
 	print("ive been called")
 	discards.append(card)
 	discards_count.text = str(discards.size())

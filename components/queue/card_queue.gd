@@ -19,7 +19,7 @@ func is_full() -> bool:
 	return open_slots().is_empty()
 
 # methods
-func add_card(card: Card) -> void:
+func add_card(card: CardResource) -> void:
 	if is_full():
 		queue_is_full.emit()
 		return
@@ -28,5 +28,5 @@ func add_card(card: Card) -> void:
 		slot.assign(card)
 
 # handlers
-func _on_slot_discard_request(card: Card) -> void:
+func _on_slot_discard_request(card: CardResource) -> void:
 	discard.emit(card)
