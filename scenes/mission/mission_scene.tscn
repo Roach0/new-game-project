@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dv4r6xkav2518" path="res://components/encounter/encounter.tscn" id="1_65ttt"]
 [ext_resource type="Script" uid="uid://c3sh3redtpkft" path="res://scenes/mission/MissionManager.gd" id="1_fmubs"]
 [ext_resource type="PackedScene" uid="uid://d0jar4dpikg7l" path="res://components/queue/card_queue.tscn" id="2_fmubs"]
-[ext_resource type="PackedScene" uid="uid://cwmilhyx2q6tp" path="res://components/deck/card_deck.tscn" id="3_fqky2"]
+[ext_resource type="PackedScene" uid="uid://cwmilhyx2q6tp" path="res://components/deck/deck.tscn" id="3_fqky2"]
 [ext_resource type="Script" uid="uid://ba27sa137jhjv" path="res://resources/resource_classes/card_resource.gd" id="4_qrvuc"]
 [ext_resource type="Resource" uid="uid://bofsyqbh17qmj" path="res://resources/card/breathe.tres" id="5_66ukh"]
 [ext_resource type="Resource" uid="uid://b5358l32kcioy" path="res://resources/card/knife_toss.tres" id="6_204gf"]

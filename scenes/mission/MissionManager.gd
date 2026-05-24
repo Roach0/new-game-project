@@ -2,6 +2,7 @@ extends Node
 
 @onready var deck: Deck = $"MarginContainer/Layout/PlayerPanel/DeckContainer/Deck1"
 @onready var queue: CardQueue = $MarginContainer/Layout/CardQueue
+@onready var decks: Dictionary = {}
 
 func _ready():
 	deck.draw_request.connect(_on_draw_request)
