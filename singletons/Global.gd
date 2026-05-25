@@ -5,6 +5,8 @@ var _next_id: int = 1
 
 func _ready():
 	load_deck(preload("res://resources/default_decks/unarmed.tres"))
+	load_deck(preload("res://resources/default_decks/unarmed.tres"))
+	load_deck(preload("res://resources/default_decks/unarmed.tres"))
 
 func load_deck(deck: DeckResource) -> void:
 	current_decks[str(_next_id)] = deck
