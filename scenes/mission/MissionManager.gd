@@ -20,7 +20,6 @@ func is_queue_full() -> bool:
 
 # deck registry
 func add_deck() -> void:
-	
 	pass
 
 # handlers
