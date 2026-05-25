@@ -2,15 +2,27 @@
 
 [ext_resource type="Script" uid="uid://ckphs26uw8nk0" path="res://components/character_view/character_slot.gd" id="1_neiv4"]
 [ext_resource type="PackedScene" uid="uid://bgwjo4j7c1ikg" path="res://components/viewport/character_viewport.tscn" id="2_mkdwl"]
+[ext_resource type="FontFile" uid="uid://d2rx621lob2nm" path="res://assets/fonts/DepartureMono-Regular.otf" id="2_wvytf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_neiv4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_djhrw"]
 bg_color = Color(0.8157888, 0.15966633, 0.28732297, 1)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mkdwl"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ol8i"]
 bg_color = Color(0.2509804, 0.7529412, 0.5058824, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_neiv4"]
+bg_color = Color(0.03827877, 0.06998043, 0.1408384, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wvytf"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_stg6y"]
 bg_color = Color(0.12634873, 0.652479, 0.64936674, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hiljt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_teyov"]
 bg_color = Color(0.84705883, 0.81960785, 0.2784314, 1)
@@ -23,7 +35,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
-ratio = 0.9742
+ratio = 1.0515
 script = ExtResource("1_neiv4")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1676974510]
@@ -33,6 +45,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxEmpty_neiv4")
 theme_override_styles/fill = SubResource("StyleBoxFlat_djhrw")
 value = 50.0
 fill_mode = 3
@@ -42,16 +55,18 @@ show_percentage = false
 custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxEmpty_mkdwl")
 theme_override_styles/fill = SubResource("StyleBoxFlat_0ol8i")
-value = 50.0
+value = 25.0
 fill_mode = 3
 show_percentage = false
 
 [node name="BG" type="Panel" parent="HBoxContainer" unique_id=2105771203]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_neiv4")
 
-[node name="Title" type="Label" parent="HBoxContainer/BG" unique_id=2054479039]
+[node name="Name" type="Label" parent="HBoxContainer/BG" unique_id=2054479039]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -60,6 +75,7 @@ offset_left = -96.0
 offset_bottom = 23.0
 grow_horizontal = 0
 size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("2_wvytf")
 text = "entity_name"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/BG" unique_id=1098233151]
@@ -85,12 +101,14 @@ anchor_bottom = 1.0
 offset_top = -23.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_wvytf")
 text = "State"
 
 [node name="Nerve" type="ProgressBar" parent="HBoxContainer" unique_id=1277711356]
 custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxEmpty_wvytf")
 theme_override_styles/fill = SubResource("StyleBoxFlat_stg6y")
 value = 50.0
 fill_mode = 3
@@ -100,6 +118,7 @@ show_percentage = false
 custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxEmpty_hiljt")
 theme_override_styles/fill = SubResource("StyleBoxFlat_teyov")
 value = 50.0
 fill_mode = 3
