@@ -8,11 +8,8 @@ enum State { IDLE, SEARCHING, ENGAGING, STUNNED, FLEEING }
 
 # resource bars
 @export_range(0, 100) var condition: int = 100
-@export_range(0, 100) var condition_max: int = 100
 @export_range(0, 100) var energy: int = 100
-@export_range(0, 100) var energy_max: int = 100
 @export_range(0, 100) var nerve: int = 100
-@export_range(0, 100) var nerve_max: int = 100
 
 # stats
 @export_range(0, 100) var accuracy: int = 75

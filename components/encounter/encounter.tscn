@@ -18,6 +18,33 @@ size_flags_vertical = 3
 [node name="EncounterSlot" parent="HBoxContainer" unique_id=843730563 instance=ExtResource("1_d30m6")]
 layout_mode = 2
 
+[node name="EncounterSlot2" parent="HBoxContainer" unique_id=951747665 instance=ExtResource("1_d30m6")]
+layout_mode = 2
+
+[node name="EncounterSlot3" parent="HBoxContainer" unique_id=1898081946 instance=ExtResource("1_d30m6")]
+layout_mode = 2
+
+[node name="EncounterSlot4" parent="HBoxContainer" unique_id=1075461255 instance=ExtResource("1_d30m6")]
+layout_mode = 2
+
+[node name="EncounterSlot5" parent="HBoxContainer" unique_id=452921648 instance=ExtResource("1_d30m6")]
+layout_mode = 2
+
 [node name="HBoxContainer2" type="HBoxContainer" parent="." unique_id=1974737291]
 layout_mode = 2
 size_flags_vertical = 3
+
+[node name="EncounterSlot" parent="HBoxContainer2" unique_id=248624057 instance=ExtResource("1_d30m6")]
+layout_mode = 2
+
+[node name="EncounterSlot2" parent="HBoxContainer2" unique_id=1308246493 instance=ExtResource("1_d30m6")]
+layout_mode = 2
+
+[node name="EncounterSlot3" parent="HBoxContainer2" unique_id=1199121268 instance=ExtResource("1_d30m6")]
+layout_mode = 2
+
+[node name="EncounterSlot4" parent="HBoxContainer2" unique_id=25085718 instance=ExtResource("1_d30m6")]
+layout_mode = 2
+
+[node name="EncounterSlot5" parent="HBoxContainer2" unique_id=685695171 instance=ExtResource("1_d30m6")]
+layout_mode = 2

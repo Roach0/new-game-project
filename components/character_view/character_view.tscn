@@ -11,6 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
+ratio = 1.2315
 script = ExtResource("1_djhrw")
 
 [node name="BG" type="Panel" parent="." unique_id=2105771203]
@@ -25,10 +26,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="BG/VBoxContainer" unique_id=2054479039]
-layout_mode = 2
-text = "entity_name"
-
 [node name="Character_Viewport" parent="BG/VBoxContainer" unique_id=211688815 instance=ExtResource("2_0ol8i")]
 layout_mode = 2
 size_flags_horizontal = 1
@@ -37,3 +34,16 @@ size_flags_vertical = 3
 [node name="State" type="Label" parent="BG/VBoxContainer" unique_id=1205841483]
 layout_mode = 2
 text = "State"
+
+[node name="Title" type="Label" parent="." unique_id=2054479039]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "entity_name"
+
+[node name="Condition" type="ProgressBar" parent="." unique_id=1393901094]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+step = 50.0
+value = 50.0
+show_percentage = false

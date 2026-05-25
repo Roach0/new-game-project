@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b68ke838cjr7b"]
 
 [ext_resource type="Script" uid="uid://yyywme8y3taq" path="res://components/queue/queue_slot.gd" id="1_e7y77"]
+[ext_resource type="Script" uid="uid://ca2xi1aivhyi" path="res://components/queue/label_set.gd" id="2_01m2u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dn4e1"]
 bg_color = Color(0.07824623, 0.22093803, 0.27688247, 1)
@@ -32,11 +33,12 @@ grow_horizontal = 2
 text = "Example"
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("2_01m2u")
 
 [node name="Description" type="Label" parent="BG" unique_id=858082969]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.5922716
+anchor_top = 0.5073951
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 0.2079773
@@ -47,6 +49,7 @@ text = "Example"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+script = ExtResource("2_01m2u")
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="BG" unique_id=591520108]
