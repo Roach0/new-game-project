@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://o5r23yq3wb1r"]
+
+[ext_resource type="Script" uid="uid://ba27sa137jhjv" path="res://resources/resource_classes/card_resource.gd" id="1_0rij5"]
+
+[resource]
+script = ExtResource("1_0rij5")
+card_name = "Punch"
+description = "Reduces Stamina and Health, Causes maximu Alert."
+metadata/_custom_type_script = "uid://ba27sa137jhjv"

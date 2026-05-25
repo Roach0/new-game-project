@@ -3,12 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://dv4r6xkav2518" path="res://components/encounter/encounter.tscn" id="1_65ttt"]
 [ext_resource type="Script" uid="uid://c3sh3redtpkft" path="res://scenes/mission/MissionManager.gd" id="1_fmubs"]
 [ext_resource type="PackedScene" uid="uid://d0jar4dpikg7l" path="res://components/queue/card_queue.tscn" id="2_fmubs"]
-[ext_resource type="PackedScene" uid="uid://cwmilhyx2q6tp" path="res://components/deck/deck.tscn" id="3_fqky2"]
-[ext_resource type="Script" uid="uid://ba27sa137jhjv" path="res://resources/resource_classes/card_resource.gd" id="4_qrvuc"]
-[ext_resource type="Resource" uid="uid://bofsyqbh17qmj" path="res://resources/card/breathe.tres" id="5_66ukh"]
-[ext_resource type="Resource" uid="uid://b5358l32kcioy" path="res://resources/card/knife_toss.tres" id="6_204gf"]
-[ext_resource type="Resource" uid="uid://c6l8b600lm5ef" path="res://resources/card/stealth.tres" id="7_brwp2"]
-[ext_resource type="Resource" uid="uid://cxejkpan13aem" path="res://resources/card/take_cover.tres" id="8_jtubb"]
 
 [node name="MissionScene" type="Control" unique_id=1580007813]
 layout_mode = 3
@@ -59,7 +53,3 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-
-[node name="Deck1" parent="MarginContainer/Layout/PlayerPanel/DeckContainer" unique_id=1367649581 instance=ExtResource("3_fqky2")]
-layout_mode = 2
-starting_cards = Array[ExtResource("4_qrvuc")]([ExtResource("5_66ukh"), ExtResource("5_66ukh"), ExtResource("6_204gf"), ExtResource("6_204gf"), ExtResource("7_brwp2"), ExtResource("8_jtubb"), ExtResource("8_jtubb"), ExtResource("8_jtubb"), ExtResource("7_brwp2"), ExtResource("5_66ukh")])

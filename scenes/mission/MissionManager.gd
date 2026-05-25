@@ -5,8 +5,9 @@ extends Node
 @onready var decks: Dictionary = {}
 
 func _ready():
-	deck.draw_request.connect(_on_draw_request)
+	# deck.draw_request.connect(_on_draw_request)
 	queue.discard.connect(_on_discard)
+	print(str(deck))
 
 # queries
 func is_queue_full() -> bool:
@@ -16,7 +17,10 @@ func is_queue_full() -> bool:
 	return queue.is_full()
 
 # methods
-func register_deck() -> void:
+
+# deck registry
+func add_deck() -> void:
+	
 	pass
 
 # handlers
