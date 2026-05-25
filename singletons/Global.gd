@@ -1,10 +1,18 @@
 extends Control
 
-# Scene Setups
+
 var current_decks: Dictionary[ String, DeckResource ] = {}
 
-func load_deck(DeckResource) -> void:
-	
-	pass
-	
-	# we want this to pull from a deck resource template.
+
+_ready():
+	load_deck(unarmed.tres)
+
+
+#Methods
+
+func load_deck(deck: DeckResource) -> void:
+	current_decks[str(current_decks.size() + 1)] = deck
+func unload_deck(key: String) -> void:
+	current_decks.erase(key)
+func has_deck(key: String) -> bool:
+	return current_decks.has(key)
