@@ -51,7 +51,8 @@ func discard(card: CardResource):
 	_update_counts()
 
 func redraw():
-	pass
+	cards.append_array(discards)
+	cards.shuffle()
 
 # helpers
 func _update_counts():
