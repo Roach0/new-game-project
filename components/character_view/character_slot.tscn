@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bdefg3a1orjh3"]
 
-[ext_resource type="Script" uid="uid://ckphs26uw8nk0" path="res://components/character_view/character_view.gd" id="1_djhrw"]
-[ext_resource type="PackedScene" uid="uid://bgwjo4j7c1ikg" path="res://components/viewport/character_viewport.tscn" id="2_0ol8i"]
+[ext_resource type="Script" uid="uid://ckphs26uw8nk0" path="res://components/character_view/character_slot.gd" id="1_neiv4"]
+[ext_resource type="PackedScene" uid="uid://bgwjo4j7c1ikg" path="res://components/viewport/character_viewport.tscn" id="2_mkdwl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_djhrw"]
 bg_color = Color(0.8157888, 0.15966633, 0.28732297, 1)
@@ -15,7 +15,7 @@ bg_color = Color(0.12634873, 0.652479, 0.64936674, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_teyov"]
 bg_color = Color(0.84705883, 0.81960785, 0.2784314, 1)
 
-[node name="EncounterSlot" type="AspectRatioContainer" unique_id=843730563]
+[node name="CharacterSlot" type="AspectRatioContainer" unique_id=843730563]
 clip_contents = true
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,7 +24,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 ratio = 0.9742
-script = ExtResource("1_djhrw")
+script = ExtResource("1_neiv4")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1676974510]
 layout_mode = 2
@@ -70,7 +70,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Character_Viewport" parent="HBoxContainer/BG/VBoxContainer" unique_id=211688815 instance=ExtResource("2_0ol8i")]
+[node name="Character_Viewport" parent="HBoxContainer/BG/VBoxContainer" unique_id=211688815 instance=ExtResource("2_mkdwl")]
 clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 1

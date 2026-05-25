@@ -1,5 +1,5 @@
 extends AspectRatioContainer
-class_name EncounterSlot
+class_name CharacterSlot
 
 
 @onready var title = $BG/VBoxContainer/Title
@@ -21,8 +21,8 @@ func assign(data: CharacterResource) -> void:
 
 func clear() -> void:
 	encounter_type = null
-#	$BG/VBoxContainer/Title.text = ""
-#	$BG/VBoxContainer/State.text = ""
+	title = ""
+	state = ""
 
 func _on_button_pressed() -> void:
 	clear()
