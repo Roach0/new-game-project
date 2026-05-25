@@ -49,7 +49,15 @@ size_flags_stretch_ratio = 0.1
 layout_mode = 2
 size_flags_vertical = 3
 
+[node name="VSeparator2" type="VSeparator" parent="MarginContainer/Layout/PlayerPanel" unique_id=1872571694]
+layout_mode = 2
+size_flags_horizontal = 3
+
 [node name="DeckContainer" type="HBoxContainer" parent="MarginContainer/Layout/PlayerPanel" unique_id=643053006]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/Layout/PlayerPanel" unique_id=1496289170]
+layout_mode = 2
+size_flags_horizontal = 3
