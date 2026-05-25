@@ -1,7 +1,13 @@
 extends Resource
 class_name CharacterResource
 
-enum State { IDLE, SEARCHING, ENGAGING, STUNNED, FLEEING }
+enum State { 
+	IDLE, 
+	SEARCHING, 
+	ENGAGING, 
+	STUNNED, 
+	FLEEING 
+	}
 
 @export var name: String
 @export var state: State = State.IDLE
