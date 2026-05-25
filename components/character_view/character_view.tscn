@@ -3,6 +3,18 @@
 [ext_resource type="Script" uid="uid://ckphs26uw8nk0" path="res://components/character_view/character_view.gd" id="1_djhrw"]
 [ext_resource type="PackedScene" uid="uid://bgwjo4j7c1ikg" path="res://components/viewport/character_viewport.tscn" id="2_0ol8i"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_djhrw"]
+bg_color = Color(0.8157888, 0.15966633, 0.28732297, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ol8i"]
+bg_color = Color(0.2509804, 0.7529412, 0.5058824, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_stg6y"]
+bg_color = Color(0.12634873, 0.652479, 0.64936674, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_teyov"]
+bg_color = Color(0.84705883, 0.81960785, 0.2784314, 1)
+
 [node name="EncounterSlot" type="AspectRatioContainer" unique_id=843730563]
 clip_contents = true
 anchors_preset = 15
@@ -17,10 +29,20 @@ script = ExtResource("1_djhrw")
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1676974510]
 layout_mode = 2
 
-[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer" unique_id=925147142]
+[node name="Condition" type="ProgressBar" parent="HBoxContainer" unique_id=2111159631]
 custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_styles/fill = SubResource("StyleBoxFlat_djhrw")
+value = 50.0
+fill_mode = 3
+show_percentage = false
+
+[node name="Energy" type="ProgressBar" parent="HBoxContainer" unique_id=925147142]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_styles/fill = SubResource("StyleBoxFlat_0ol8i")
 value = 50.0
 fill_mode = 3
 show_percentage = false
@@ -31,13 +53,12 @@ size_flags_horizontal = 3
 
 [node name="Title" type="Label" parent="HBoxContainer/BG" unique_id=2054479039]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -48.0
-offset_right = 48.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -96.0
 offset_bottom = 23.0
-grow_horizontal = 2
+grow_horizontal = 0
 size_flags_horizontal = 0
 text = "entity_name"
 
@@ -50,21 +71,39 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Character_Viewport" parent="HBoxContainer/BG/VBoxContainer" unique_id=211688815 instance=ExtResource("2_0ol8i")]
+clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 1
 size_flags_vertical = 3
 
-[node name="ProgressBar2" type="ProgressBar" parent="HBoxContainer" unique_id=1277711356]
+[node name="State" type="Label" parent="HBoxContainer/BG" unique_id=1205841483]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "State"
+
+[node name="Nerve" type="ProgressBar" parent="HBoxContainer" unique_id=1277711356]
 custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_styles/fill = SubResource("StyleBoxFlat_stg6y")
 value = 50.0
 fill_mode = 3
 show_percentage = false
 
-[node name="State" type="Label" parent="." unique_id=1205841483]
+[node name="Alert" type="ProgressBar" parent="HBoxContainer" unique_id=248702511]
+custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
-text = "State"
+size_flags_vertical = 1
+theme_override_styles/fill = SubResource("StyleBoxFlat_teyov")
+value = 50.0
+fill_mode = 3
+show_percentage = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1637113206]
 offset = Vector2(0, -23.75)
