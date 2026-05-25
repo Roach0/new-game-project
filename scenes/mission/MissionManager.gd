@@ -1,13 +1,11 @@
 extends Node
 
-@onready var deck: Deck = $"MarginContainer/Layout/PlayerPanel/DeckContainer/Deck1"
 @onready var queue: CardQueue = $MarginContainer/Layout/CardQueue
 @onready var decks: Dictionary = {}
 
 func _ready():
 	# deck.draw_request.connect(_on_draw_request)
 	queue.discard.connect(_on_discard)
-	print(str(deck))
 
 # queries
 func is_queue_full() -> bool:
@@ -17,6 +15,7 @@ func is_queue_full() -> bool:
 	return queue.is_full()
 
 # methods
+
 
 # deck registry
 func add_deck() -> void:

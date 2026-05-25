@@ -22,7 +22,9 @@ func is_empty() ->  bool:
 
 # methods
 func build_deck():
-	for card in starting_cards:
+	
+	
+	for card in starting_cards: # we start by establishign a connection point on both ends of this. 
 		cards.append(card.duplicate())
 	cards_count.text = str(cards.size())
 	discards_count.text = str(discards.size())
