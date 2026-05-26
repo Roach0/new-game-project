@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://b68ke838cjr7b" path="res://components/queue/queue_slot.tscn" id="2_nx0cm"]
 
 [node name="CardQueue" type="HBoxContainer" unique_id=870833839]
-offset_right = 1153.0
-offset_bottom = 133.0
+offset_right = 1560.0
+offset_bottom = 227.0
 size_flags_vertical = 3
 script = ExtResource("1_3ncrb")
 

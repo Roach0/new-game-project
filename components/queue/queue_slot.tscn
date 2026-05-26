@@ -9,19 +9,22 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nx0cm"]
 
 [node name="QueueSlot" type="AspectRatioContainer" unique_id=1992712346]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+custom_minimum_size = Vector2(100, 100)
+anchors_preset = -1
+anchor_right = 0.17400001
+anchor_bottom = 0.35000002
+offset_right = -0.4480133
+offset_bottom = 0.19998169
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
-ratio = 0.714
 script = ExtResource("1_e7y77")
 
 [node name="Layout" type="VBoxContainer" parent="." unique_id=628001938]
 layout_mode = 2
 
 [node name="Title" type="Label" parent="Layout" unique_id=2097696200]
+visible = false
 layout_mode = 2
 text = "Example"
 horizontal_alignment = 1
@@ -29,7 +32,6 @@ vertical_alignment = 1
 script = ExtResource("2_01m2u")
 
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="Layout" unique_id=514793832]
-custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_vertical = 3
 ratio = 0.227
@@ -47,16 +49,13 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_g17gj")
 
 [node name="Description" type="Label" parent="Panel" unique_id=858082969]
+visible = false
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1.0
-offset_top = -328.0
-grow_horizontal = 0
-grow_vertical = 0
+grow_horizontal = 2
+grow_vertical = 2
 text = "Example"
 horizontal_alignment = 1
 vertical_alignment = 1

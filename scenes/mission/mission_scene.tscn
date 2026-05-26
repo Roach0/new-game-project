@@ -30,7 +30,7 @@ layout_mode = 2
 [node name="EncounterSpace" type="MarginContainer" parent="MarginContainer/Layout" unique_id=26561254]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 2.38
+size_flags_stretch_ratio = 1.67
 theme_override_constants/margin_bottom = 12
 
 [node name="---1" type="HSeparator" parent="MarginContainer/Layout" unique_id=2034588967]

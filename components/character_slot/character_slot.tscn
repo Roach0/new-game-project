@@ -36,6 +36,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 ratio = 1.0515
+stretch_mode = 1
 script = ExtResource("1_neiv4")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1676974510]
