@@ -4,6 +4,8 @@ class_name QueueSlot
 
 @onready var title = $BG/Title
 @onready var description = $BG/Description
+@export var drop_offset: Vector2 = Vector2(0, -300)
+@export var duration: float  = 0.55
 var card: CardResource = null
 
 signal discard_request(card: CardResource)
