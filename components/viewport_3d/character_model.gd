@@ -24,3 +24,23 @@ func play_default_idle() -> void:
 	if list.size() > 0:
 		# Fallback so you still get motion if "Idle" has a different name in the GLB.
 		play_anim(StringName(list[0]))
+
+func set_skin(texture: Texture2D, mesh_surface: int = 0) -> void:
+	var mesh_instance := get_node_or_null("MeshInstance3D") as MeshInstance3D
+	if mesh_instance == null:
+		push_warning("No MeshInstance3D found on model")
+		return
+	var mat := mesh_instance.get_surface_override_material(mesh_surface)
+	if mat == null:
+		# Clone the shared material so we don't affect other instances
+		mat = mesh_instance.get_active_material(mesh_surface).duplicate()
+		mesh_instance.set_surface_override_material(mesh_surface, mat)
+	if mat is StandardMaterial3D or mat is ORMMaterial3D:
+		mat.albedo_texture = texture
+
+# Swap the entire mesh (different body shape, same rig)
+func set_mesh(new_mesh: Mesh) -> void:
+	var mesh_instance := get_node_or_null("MeshInstance3D") as MeshInstance3D
+	if mesh_instance == null:
+		return
+	mesh_instance.mesh = new_mesh
