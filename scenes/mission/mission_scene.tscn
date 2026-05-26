@@ -28,19 +28,24 @@ theme_override_constants/margin_bottom = 10
 [node name="Layout" type="VBoxContainer" parent="MarginContainer" unique_id=1294214604]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Layout" unique_id=26561254]
+[node name="EncounterSpace" type="MarginContainer" parent="MarginContainer/Layout" unique_id=26561254]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.38
 theme_override_constants/margin_bottom = 12
 
-[node name="Encounter" parent="MarginContainer/Layout/MarginContainer" unique_id=1512536903 instance=ExtResource("1_65ttt")]
+[node name="Encounter" parent="MarginContainer/Layout/EncounterSpace" unique_id=1512536903 instance=ExtResource("1_65ttt")]
 layout_mode = 2
+
+[node name="---1" type="HSeparator" parent="MarginContainer/Layout" unique_id=2034588967]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
 
 [node name="CardQueue" parent="MarginContainer/Layout" unique_id=870833839 instance=ExtResource("2_fmubs")]
 layout_mode = 2
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/Layout" unique_id=608728839]
+[node name="---2" type="HSeparator" parent="MarginContainer/Layout" unique_id=608728839]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.1

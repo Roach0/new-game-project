@@ -1,1 +1,1 @@
-extends AspectRatioContainer
+extends VBoxContainer

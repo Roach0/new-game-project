@@ -9,11 +9,11 @@ func _ready():
 
 func _fit_text():
 	var parent_width = get_parent_control().size.x
-	var size = max_font_size
+	var font_size = max_font_size
 
-	while size > min_font_size:
-		add_theme_font_size_override("font_size", size)
+	while font_size > min_font_size:
+		add_theme_font_size_override("font_size", font_size)
 		await get_tree().process_frame  # let Godot recalculate layout
 		if get_minimum_size().x <= parent_width:
 			break
-		size -= 1
+		font_size -= 1
