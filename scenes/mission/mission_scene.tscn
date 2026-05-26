@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://bwi3f03vnopsn"]
 
-[ext_resource type="PackedScene" uid="uid://dv4r6xkav2518" path="res://components/encounter/encounter.tscn" id="1_65ttt"]
 [ext_resource type="Script" uid="uid://c3sh3redtpkft" path="res://scenes/mission/MissionManager.gd" id="1_fmubs"]
 [ext_resource type="PackedScene" uid="uid://d0jar4dpikg7l" path="res://components/queue/card_queue.tscn" id="2_fmubs"]
 
@@ -33,9 +32,6 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.38
 theme_override_constants/margin_bottom = 12
-
-[node name="Encounter" parent="MarginContainer/Layout/EncounterSpace" unique_id=1512536903 instance=ExtResource("1_65ttt")]
-layout_mode = 2
 
 [node name="---1" type="HSeparator" parent="MarginContainer/Layout" unique_id=2034588967]
 layout_mode = 2

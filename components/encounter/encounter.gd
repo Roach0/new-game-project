@@ -1,1 +1,2 @@
 extends VBoxContainer
+class_name Encounter

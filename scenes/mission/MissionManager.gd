@@ -2,8 +2,10 @@ extends Node
 
 @onready var queue: CardQueue = $MarginContainer/Layout/CardQueue
 @onready var deck_container = $MarginContainer/Layout/PlayerPanel/DeckContainer
+@onready var encounter_space = $MarginContainer/Layout/EncounterSpace
 
 var deck_scene = preload("res://components/deck/deck.tscn")
+var encounter_scene = preload("res://components/encounter/encounter.tscn")
 
 func _ready():
 	queue.discard.connect(_on_discard)
@@ -25,6 +27,8 @@ func player_panel_assembly(decks: Dictionary) -> void:
 		d.deck_data = decks[deck_id]
 		d.draw_request.connect(_on_draw_request)
 
+func load_encounter(encounter: EncounterResource) -> void:
+	encounter_space.add_child(encounter_scene)
 # handlers
 func _on_draw_request(deck: Deck) -> void:
 	if is_queue_full():
