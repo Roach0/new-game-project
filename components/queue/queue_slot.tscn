@@ -2,10 +2,6 @@
 
 [ext_resource type="Script" uid="uid://yyywme8y3taq" path="res://components/queue/queue_slot.gd" id="1_e7y77"]
 [ext_resource type="Script" uid="uid://ca2xi1aivhyi" path="res://components/queue/label_set.gd" id="2_01m2u"]
-[ext_resource type="Texture2D" uid="uid://cjvsfvwdm7y3h" path="res://assets/slot_icons/RPG_Stat_Strength_Fist_Melee_Attack.png" id="2_g17gj"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sdfpv"]
-texture = ExtResource("2_g17gj")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g17gj"]
 
@@ -37,12 +33,11 @@ layout_mode = 2
 size_flags_vertical = 3
 ratio = 0.9743
 
-[node name="BG" type="Panel" parent="Layout/AspectRatioContainer" unique_id=825622928]
+[node name="BG" type="TextureRect" parent="Layout/AspectRatioContainer" unique_id=1155519685]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxTexture_sdfpv")
 
 [node name="Panel" type="Panel" parent="." unique_id=1216425545]
 layout_mode = 2
