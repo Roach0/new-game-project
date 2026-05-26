@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dv4r6xkav2518"]
 
+[ext_resource type="PackedScene" uid="uid://bdefg3a1orjh3" path="res://components/character_slot/character_slot.tscn" id="1_d30m6"]
 [ext_resource type="Script" uid="uid://cl6k0oivbjbjg" path="res://components/encounter/encounter.gd" id="1_sq4sy"]
 
 [node name="Encounter" type="VBoxContainer" unique_id=1512536903]
@@ -16,6 +17,36 @@ script = ExtResource("1_sq4sy")
 layout_mode = 2
 size_flags_vertical = 3
 
+[node name="CharacterSlot" parent="TopRow" unique_id=843730563 instance=ExtResource("1_d30m6")]
+layout_mode = 2
+
+[node name="CharacterSlot2" parent="TopRow" unique_id=1393760505 instance=ExtResource("1_d30m6")]
+layout_mode = 2
+
+[node name="CharacterSlot3" parent="TopRow" unique_id=1142630402 instance=ExtResource("1_d30m6")]
+layout_mode = 2
+
+[node name="CharacterSlot4" parent="TopRow" unique_id=173392541 instance=ExtResource("1_d30m6")]
+layout_mode = 2
+
+[node name="CharacterSlot5" parent="TopRow" unique_id=221707234 instance=ExtResource("1_d30m6")]
+layout_mode = 2
+
 [node name="BottomRow" type="HBoxContainer" parent="." unique_id=1974737291]
 layout_mode = 2
 size_flags_vertical = 3
+
+[node name="CharacterSlot" parent="BottomRow" unique_id=1462455616 instance=ExtResource("1_d30m6")]
+layout_mode = 2
+
+[node name="CharacterSlot2" parent="BottomRow" unique_id=1384090974 instance=ExtResource("1_d30m6")]
+layout_mode = 2
+
+[node name="CharacterSlot3" parent="BottomRow" unique_id=80205566 instance=ExtResource("1_d30m6")]
+layout_mode = 2
+
+[node name="CharacterSlot4" parent="BottomRow" unique_id=1029742525 instance=ExtResource("1_d30m6")]
+layout_mode = 2
+
+[node name="CharacterSlot5" parent="BottomRow" unique_id=964044710 instance=ExtResource("1_d30m6")]
+layout_mode = 2

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://drsf7nnqpb6py"]
 
-[ext_resource type="PackedScene" uid="uid://brgfqwhag2us5" path="res://components/viewport/UAL1_Standard.glb" id="1_io56q"]
-[ext_resource type="Script" uid="uid://dg4mx1m86w5bm" path="res://components/viewport/character_model.gd" id="2_pp8oh"]
+[ext_resource type="PackedScene" uid="uid://brgfqwhag2us5" path="res://components/viewport_3d/UAL1_Standard.glb" id="1_io56q"]
+[ext_resource type="Script" uid="uid://dg4mx1m86w5bm" path="res://components/viewport_3d/character_model.gd" id="2_pp8oh"]
 
 [node name="Character" unique_id=430194858 instance=ExtResource("1_io56q")]
 transform = Transform3D(0.9751996, 0, 0.22132725, 0, 1, 0, -0.22132725, 0, 0.9751996, 0, 0, 0)

@@ -2,8 +2,8 @@ extends AspectRatioContainer
 class_name CharacterSlot
 
 
-@onready var title = $BG/Name
-@onready var state = $BG/State
+@onready var title = $HBoxContainer/BG/Name
+@onready var state = $HBoxContainer/BG/StateBG/State
 @onready var Condition : ProgressBar = $HBoxContainer/Condition
 @onready var Energy : ProgressBar = $HBoxContainer/Energy
 @onready var Nerve : ProgressBar = $HBoxContainer/Nerve

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bdefg3a1orjh3"]
 
 [ext_resource type="Script" uid="uid://ckphs26uw8nk0" path="res://components/character_slot/character_slot.gd" id="1_neiv4"]
-[ext_resource type="PackedScene" uid="uid://bgwjo4j7c1ikg" path="res://components/viewport/character_viewport.tscn" id="2_mkdwl"]
+[ext_resource type="PackedScene" uid="uid://bgwjo4j7c1ikg" path="res://components/viewport_3d/character_viewport.tscn" id="2_mkdwl"]
 [ext_resource type="FontFile" uid="uid://d2rx621lob2nm" path="res://assets/fonts/DepartureMono-Regular.otf" id="2_wvytf"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_neiv4"]

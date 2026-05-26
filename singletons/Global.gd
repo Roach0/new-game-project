@@ -1,6 +1,9 @@
 extends Control
 
+# move these out to full setups eventually
 var current_decks: Dictionary[String, DeckResource] = {}
+var encounter : EncounterResource = null
+
 var _next_id: int = 1
 
 func _ready():

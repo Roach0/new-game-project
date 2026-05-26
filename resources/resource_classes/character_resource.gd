@@ -2,7 +2,8 @@ extends Resource
 class_name CharacterResource
 
 enum State { 
-	IDLE, 
+	IDLE,
+	PATROLLING,
 	SEARCHING, 
 	ENGAGING, 
 	STUNNED, 
@@ -18,4 +19,4 @@ enum State {
 @export_range(0, 100) var nerve: int = 100
 
 # stats
-@export_range(0, 100) var accuracy: int = 75
+@export_range(0, 100) var alert: int = 75

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CharacterResource" format=3 uid="uid://bhl1itdn4cb3p"]
+
+[ext_resource type="Script" uid="uid://ig8sava42vh3" path="res://resources/resource_classes/character_resource.gd" id="1_p2ee3"]
+
+[resource]
+script = ExtResource("1_p2ee3")
+name = "Guard"
+alert = 15
+metadata/_custom_type_script = "uid://ig8sava42vh3"
