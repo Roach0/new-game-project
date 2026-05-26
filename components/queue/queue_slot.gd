@@ -41,9 +41,9 @@ func assign(data: CardResource) -> void:
 
 func clear() -> void:
 	card = null
-	$Layout/Title.text = ""
-	$Panel/Description.text = ""
-	icon_rect.modulate.a = 0.0
+	if title: title.text = ""
+	if description: description.text = ""
+	if icon_rect: icon_rect.modulate.a = 0.0
 
 func _apply_icon(texture: Texture2D) -> void:
 	icon_rect.texture = texture
