@@ -45,8 +45,8 @@ func assign(data: CardResource) -> void:
 
 func clear() -> void:
 	card = null
-	$BG/Title.text = ""
-	$BG/Description.text = ""
+	$Layout/Title.text = ""
+	$Layout/Description.text = ""
 
 # handlers
 func _on_button_pressed() -> void:

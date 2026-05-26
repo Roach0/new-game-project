@@ -2,9 +2,10 @@
 
 [ext_resource type="Script" uid="uid://yyywme8y3taq" path="res://components/queue/queue_slot.gd" id="1_e7y77"]
 [ext_resource type="Script" uid="uid://ca2xi1aivhyi" path="res://components/queue/label_set.gd" id="2_01m2u"]
+[ext_resource type="Texture2D" uid="uid://cjvsfvwdm7y3h" path="res://assets/slot_icons/RPG_Stat_Strength_Fist_Melee_Attack.png" id="2_g17gj"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dn4e1"]
-bg_color = Color(0.07824623, 0.22093803, 0.27688247, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sdfpv"]
+texture = ExtResource("2_g17gj")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nx0cm"]
 
@@ -17,36 +18,32 @@ grow_vertical = 2
 size_flags_horizontal = 3
 ratio = 0.714
 script = ExtResource("1_e7y77")
-drop_offset = null
-duration = null
 
-[node name="BG" type="Panel" parent="." unique_id=825622928]
+[node name="Layout" type="VBoxContainer" parent="." unique_id=628001938]
 layout_mode = 2
-size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_dn4e1")
 
-[node name="Title" type="Label" parent="BG" unique_id=2097696200]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 0.17400001
-offset_bottom = 0.24799347
-grow_horizontal = 2
+[node name="Title" type="Label" parent="Layout" unique_id=2097696200]
+layout_mode = 2
 text = "Example"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("2_01m2u")
 
-[node name="Description" type="Label" parent="BG" unique_id=858082969]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.19720991
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 0.2079773
-offset_right = 0.66400146
-grow_horizontal = 2
-grow_vertical = 0
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Layout" unique_id=514793832]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_vertical = 3
+ratio = 0.9743
+
+[node name="BG" type="Panel" parent="Layout/AspectRatioContainer" unique_id=825622928]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_sdfpv")
+
+[node name="Description" type="Label" parent="Layout" unique_id=858082969]
+layout_mode = 2
 text = "Example"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -54,13 +51,8 @@ autowrap_mode = 2
 script = ExtResource("2_01m2u")
 metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="BG" unique_id=591520108]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Button" type="Button" parent="." unique_id=591520108]
+layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_nx0cm")
 
-[connection signal="pressed" from="BG/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
