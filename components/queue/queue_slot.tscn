@@ -63,6 +63,7 @@ autowrap_mode = 2
 script = ExtResource("2_01m2u")
 
 [node name="Button" type="Button" parent="." unique_id=591520108]
+visible = false
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_nx0cm")
 
