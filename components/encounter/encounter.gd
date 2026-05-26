@@ -12,5 +12,13 @@ func assemble_encounter(encounter:EncounterResource) -> void:
 		encounter_characters.append(c)
 	encounter_characters.shuffle()
 	for c in encounter_characters:
-		if top_row.get_child_count() < 5:
-			top_row.add_child(character_slot)
+		add_character_slot(c)
+
+func add_character_slot(character: CharacterResource) -> void:
+	if top_row.get_child_count() < 5:
+		top_row.add_child(character_slot)
+		return
+	if bot_row.get_child_count() < 5:
+		bot_row.add_child(character_slot)
+		return
+	print("encounter.gd ERROR : cannot place character : scene full")
