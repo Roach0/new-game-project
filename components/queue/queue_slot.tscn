@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://yyywme8y3taq" path="res://components/queue/queue_slot.gd" id="1_e7y77"]
 [ext_resource type="Script" uid="uid://ca2xi1aivhyi" path="res://components/queue/label_set.gd" id="2_01m2u"]
+[ext_resource type="Texture2D" uid="uid://cjvsfvwdm7y3h" path="res://assets/slot_icons/RPG_Stat_Strength_Fist_Melee_Attack.png" id="2_g17gj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g17gj"]
 
@@ -31,13 +32,15 @@ script = ExtResource("2_01m2u")
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_vertical = 3
-ratio = 0.9743
+ratio = 0.227
 
 [node name="BG" type="TextureRect" parent="Layout/AspectRatioContainer" unique_id=1155519685]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+texture = ExtResource("2_g17gj")
+stretch_mode = 5
 
 [node name="Panel" type="Panel" parent="." unique_id=1216425545]
 layout_mode = 2
