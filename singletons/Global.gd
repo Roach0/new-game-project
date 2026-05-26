@@ -1,4 +1,5 @@
-extends Control
+extends Node
+#autoload singleton btw
 
 var current_decks: Dictionary[String, DeckResource] = {}
 var next_encounter: EncounterResource
@@ -15,7 +16,7 @@ func load_deck(deck: DeckResource) -> void:
 	current_decks[str(_next_id)] = deck
 	_next_id += 1
 
-func load_encounter(encounter:EncounterResource):
+func load_encounter(encounter:EncounterResource) ->void:
 	next_encounter = encounter
 
 func unload_deck(key: String) -> void:

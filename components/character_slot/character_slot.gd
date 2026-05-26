@@ -3,7 +3,7 @@ class_name CharacterSlot
 
 
 @onready var title = $HBoxContainer/BG/Name
-@onready var state = $HBoxContainer/BG/StateBG/State
+@onready var state = $HBoxContainer/BG/State
 @onready var Condition : ProgressBar = $HBoxContainer/Condition
 @onready var Energy : ProgressBar = $HBoxContainer/Energy
 @onready var Nerve : ProgressBar = $HBoxContainer/Nerve
@@ -17,17 +17,21 @@ func _ready() -> void:
 func is_empty() -> bool:
 	return encounter_type == null
 
-func assign(data: CharacterResource) -> void:
+func setup(data: CharacterResource) -> void:
 	if data == null:
 		return
 	encounter_type = data
-	title.text = data.card_name
-	state.text = data.description
+	title.text = data.name          # was data.card_name
+	state.text = str(data.state)    # enum needs str() conversion
+	Condition.value = data.condition
+	Energy.value = data.energy
+	Nerve.value = data.nerve
+	Alert.value = data.alert
 
 func clear() -> void:
 	encounter_type = null
-	title = ""
-	state = ""
+	title.text = ""   # needs .text
+	state.text = "" 
 
 func _on_button_pressed() -> void:
 	clear()

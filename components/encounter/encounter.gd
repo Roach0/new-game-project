@@ -15,10 +15,13 @@ func assemble_encounter(encounter:EncounterResource) -> void:
 		add_character_slot(c)
 
 func add_character_slot(character: CharacterResource) -> void:
+	var slot = character_slot.instantiate()
 	if top_row.get_child_count() < 5:
-		top_row.add_child(character_slot)
+		top_row.add_child(slot)
+		slot.setup(character)
 		return
 	if bot_row.get_child_count() < 5:
-		bot_row.add_child(character_slot)
+		bot_row.add_child(slot)
+		slot.setup(character)
 		return
 	print("encounter.gd ERROR : cannot place character : scene full")

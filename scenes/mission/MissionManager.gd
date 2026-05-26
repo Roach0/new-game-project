@@ -10,6 +10,7 @@ var encounter_scene = preload("res://components/encounter/encounter.tscn")
 func _ready():
 	queue.discard.connect(_on_discard)
 	player_panel_assembly(Global.current_decks)
+	load_encounter(Global.next_encounter)
 
 # queries
 func is_queue_full() -> bool:
@@ -28,7 +29,12 @@ func player_panel_assembly(decks: Dictionary) -> void:
 		d.draw_request.connect(_on_draw_request)
 
 func load_encounter(encounter: EncounterResource) -> void:
-	encounter_space.add_child(encounter_scene)
+	for child in encounter_space.get_children():
+		child.queue_free()
+	var instance = encounter_scene.instantiate()
+	encounter_space.add_child(instance)
+	instance.assemble_encounter(encounter)
+
 # handlers
 func _on_draw_request(deck: Deck) -> void:
 	if is_queue_full():
