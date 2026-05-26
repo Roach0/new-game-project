@@ -77,6 +77,7 @@ grow_horizontal = 0
 size_flags_horizontal = 0
 theme_override_fonts/font = ExtResource("2_wvytf")
 text = "entity_name"
+horizontal_alignment = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/BG" unique_id=1098233151]
 layout_mode = 1

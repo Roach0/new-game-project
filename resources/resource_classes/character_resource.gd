@@ -7,7 +7,7 @@ enum State {
 	SEARCHING, 
 	ENGAGING, 
 	STUNNED, 
-	FLEEING 
+	FLEEING
 	}
 
 @export var name: String

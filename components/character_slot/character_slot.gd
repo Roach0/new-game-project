@@ -17,16 +17,16 @@ func _ready() -> void:
 func is_empty() -> bool:
 	return encounter_type == null
 
-func setup(data: CharacterResource) -> void:
-	if data == null:
+func setup(character: CharacterResource) -> void:
+	if character == null:
 		return
-	encounter_type = data
-	title.text = data.name          # was data.card_name
-	state.text = str(data.state)    # enum needs str() conversion
-	Condition.value = data.condition
-	Energy.value = data.energy
-	Nerve.value = data.nerve
-	Alert.value = data.alert
+	encounter_type = character
+	title.text = "_" + character.name
+	state.text = CharacterResource.State.keys()[character.state].to_lower() + "_"
+	Condition.value = character.condition
+	Energy.value = character.energy
+	Nerve.value = character.nerve
+	Alert.value = character.alert
 
 func clear() -> void:
 	encounter_type = null
