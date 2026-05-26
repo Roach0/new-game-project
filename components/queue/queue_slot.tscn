@@ -17,6 +17,8 @@ grow_vertical = 2
 size_flags_horizontal = 3
 ratio = 0.714
 script = ExtResource("1_e7y77")
+drop_offset = null
+duration = null
 
 [node name="BG" type="Panel" parent="." unique_id=825622928]
 layout_mode = 2
