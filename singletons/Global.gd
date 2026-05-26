@@ -1,9 +1,7 @@
 extends Control
 
-# move these out to full setups eventually
 var current_decks: Dictionary[String, DeckResource] = {}
-var encounter : EncounterResource = null
-
+var next_encounters: Array[EncounterResource] = []
 var _next_id: int = 1
 
 func _ready():
@@ -14,6 +12,10 @@ func _ready():
 func load_deck(deck: DeckResource) -> void:
 	current_decks[str(_next_id)] = deck
 	_next_id += 1
+
+func load_encounter(encounter:EncounterResource):
+	next_encounters
+	# later, expand out to option selection later
 
 func unload_deck(key: String) -> void:
 	current_decks.erase(key)
