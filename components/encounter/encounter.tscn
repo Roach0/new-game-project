@@ -16,6 +16,6 @@ script = ExtResource("1_sq4sy")
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="BottomRow" type="HBoxContainer" parent="." unique_id=1974737291]
+[node name="BotRow" type="HBoxContainer" parent="." unique_id=1974737291]
 layout_mode = 2
 size_flags_vertical = 3
