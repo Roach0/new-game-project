@@ -52,8 +52,9 @@ func add_card(card: CardResource) -> void:
 func remove_card(button:Button) -> void:
 	var b = button.name.lstrip("Button")
 	var s = get_node("VBoxContainer/CardQueue/Slot" + b)
-	s.clear()
 	button.modulate.a = 0.0
+	var tw = s.remove_out()
+	tw.tween_callback(s.clear)
 
 # handlers
 func _on_slot_discard_request(card: CardResource) -> void:
