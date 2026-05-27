@@ -35,26 +35,37 @@ layout_mode = 2
 [node name="Slot4" parent="VBoxContainer/CardQueue" unique_id=969676031 instance=ExtResource("2_nx0cm")]
 layout_mode = 2
 
-[node name="button_queue" type="HBoxContainer" parent="VBoxContainer" unique_id=502383445]
+[node name="ButtonQueue" type="HBoxContainer" parent="VBoxContainer" unique_id=502383445]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBoxContainer/button_queue" unique_id=116231081]
+[node name="Button0" type="Button" parent="VBoxContainer/ButtonQueue" unique_id=116231081]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Button2" type="Button" parent="VBoxContainer/button_queue" unique_id=2063487148]
+[node name="Button1" type="Button" parent="VBoxContainer/ButtonQueue" unique_id=1710576953]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Button3" type="Button" parent="VBoxContainer/button_queue" unique_id=919777195]
+[node name="Button2" type="Button" parent="VBoxContainer/ButtonQueue" unique_id=2063487148]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Button4" type="Button" parent="VBoxContainer/button_queue" unique_id=1185616039]
+[node name="Button3" type="Button" parent="VBoxContainer/ButtonQueue" unique_id=919777195]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Button5" type="Button" parent="VBoxContainer/button_queue" unique_id=1710576953]
+[node name="Button4" type="Button" parent="VBoxContainer/ButtonQueue" unique_id=1185616039]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
+
+[connection signal="pressed" from="VBoxContainer/ButtonQueue/Button0" to="." method="_on_button_0_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonQueue/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonQueue/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonQueue/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonQueue/Button4" to="." method="_on_button_4_pressed"]
