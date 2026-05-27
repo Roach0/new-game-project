@@ -43,7 +43,7 @@ func _on_draw_request(deck: Deck) -> void:
 	if card:
 		queue.add_card(card)
 
-func _on_discard(card: CardResource) -> void:
+func _on_discard(card: CardResource) -> void:# Rewrite this later / possibly del
 	for child in deck_container.get_children():
 		if child.deck_id == card.source_deck_id:
 			child.discard(card)
