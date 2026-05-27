@@ -3,8 +3,6 @@
 [ext_resource type="Script" uid="uid://yyywme8y3taq" path="res://components/queue/queue_slot.gd" id="1_e7y77"]
 [ext_resource type="Texture2D" uid="uid://cjvsfvwdm7y3h" path="res://assets/slot_icons/RPG_Stat_Strength_Fist_Melee_Attack.png" id="2_g17gj"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nx0cm"]
-
 [node name="QueueSlot" type="AspectRatioContainer" unique_id=1992712346]
 custom_minimum_size = Vector2(100, 100)
 anchors_preset = 15
@@ -25,10 +23,3 @@ layout_mode = 2
 size_flags_vertical = 3
 texture = ExtResource("2_g17gj")
 stretch_mode = 5
-
-[node name="Button" type="Button" parent="." unique_id=591520108]
-visible = false
-layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_nx0cm")
-
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

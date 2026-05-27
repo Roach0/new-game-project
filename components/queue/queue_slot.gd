@@ -1,10 +1,7 @@
 extends AspectRatioContainer
 class_name QueueSlot
 
-# @onready var title = $Layout/Title
-# @onready var description = $Layout/Panel/Description
 @onready var icon_rect = $Layout/BG
-@onready var button = $Button
 
 @export var drop_offset: Vector2 = Vector2(0, -300)
 @export var duration: float = 0.55
@@ -32,14 +29,10 @@ func assign(data: CardResource) -> void:
 	if data == null:
 		return
 	card = data
-	# title.text = data.card_name
-	# description.text = data.description
 	drop_in()
-	button.show()
 	_apply_icon(data.icon)
 
 func clear() -> void:
-	button.hide()
 	card = null
 	# if title: title.text = ""
 	# if description: description.text = ""

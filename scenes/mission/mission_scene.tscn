@@ -3,6 +3,14 @@
 [ext_resource type="Script" uid="uid://c3sh3redtpkft" path="res://scenes/mission/MissionManager.gd" id="1_fmubs"]
 [ext_resource type="PackedScene" uid="uid://d0jar4dpikg7l" path="res://components/queue/card_queue.tscn" id="2_fmubs"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ewe2u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xorw8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wull8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ymtiw"]
+
 [node name="MissionScene" type="Control" unique_id=1580007813]
 layout_mode = 3
 anchors_preset = 15
@@ -37,6 +45,7 @@ theme_override_constants/margin_bottom = 12
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.1
+theme_override_styles/separator = SubResource("StyleBoxEmpty_ewe2u")
 
 [node name="CardQueue" parent="MarginContainer/Layout" unique_id=870833839 instance=ExtResource("2_fmubs")]
 layout_mode = 2
@@ -46,6 +55,7 @@ size_flags_stretch_ratio = 0.84
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.1
+theme_override_styles/separator = SubResource("StyleBoxEmpty_xorw8")
 
 [node name="PlayerPanel" type="HBoxContainer" parent="MarginContainer/Layout" unique_id=883461242]
 layout_mode = 2
@@ -55,6 +65,7 @@ size_flags_stretch_ratio = 0.73
 [node name="VSeparator2" type="VSeparator" parent="MarginContainer/Layout/PlayerPanel" unique_id=1872571694]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxEmpty_wull8")
 
 [node name="DeckContainer" type="HBoxContainer" parent="MarginContainer/Layout/PlayerPanel" unique_id=643053006]
 layout_mode = 2
@@ -64,3 +75,4 @@ size_flags_vertical = 3
 [node name="VSeparator" type="VSeparator" parent="MarginContainer/Layout/PlayerPanel" unique_id=1496289170]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxEmpty_ymtiw")

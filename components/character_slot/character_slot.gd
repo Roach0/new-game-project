@@ -3,7 +3,7 @@ class_name CharacterSlot
 
 
 @onready var title = $HBoxContainer/BG/Name
-@onready var state = $HBoxContainer/BG/State
+@onready var state = $HBoxContainer/BG/State 
 @onready var Condition : ProgressBar = $HBoxContainer/Condition
 @onready var Energy : ProgressBar = $HBoxContainer/Energy
 @onready var Nerve : ProgressBar = $HBoxContainer/Nerve
@@ -14,9 +14,17 @@ var encounter_type: CharacterResource = null
 func _ready() -> void:
 	clear()
 
+# queries
 func is_empty() -> bool:
 	return encounter_type == null
 
+# methods
+func clear() -> void:
+	encounter_type = null
+	title.text = ""   # needs .text
+	state.text = "" 
+
+#scene build
 func setup(character: CharacterResource) -> void:
 	if character == null:
 		return
@@ -28,10 +36,6 @@ func setup(character: CharacterResource) -> void:
 	Nerve.value = character.nerve
 	Alert.value = character.alert
 
-func clear() -> void:
-	encounter_type = null
-	title.text = ""   # needs .text
-	state.text = "" 
-
+# handlers
 func _on_button_pressed() -> void:
 	clear()

@@ -1,7 +1,12 @@
 class_name CardQueue
-extends HBoxContainer
+extends MarginContainer
 
-@onready var slots:Array[QueueSlot] = [$Slot0,$Slot1,$Slot2,$Slot3,$Slot4]
+@onready var slots:Array[QueueSlot] = [
+	$VBoxContainer/CardQueue/Slot0,
+	$VBoxContainer/CardQueue/Slot1,
+	$VBoxContainer/CardQueue/Slot2,
+	$VBoxContainer/CardQueue/Slot3,
+	$VBoxContainer/CardQueue/Slot4]
 
 signal queue_is_full
 signal discard

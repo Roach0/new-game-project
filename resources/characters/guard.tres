@@ -5,7 +5,6 @@
 [resource]
 script = ExtResource("1_p2ee3")
 name = "Guard"
-condition = 80
-energy = 23
+nerve = 50
 alert = 15
 metadata/_custom_type_script = "uid://ig8sava42vh3"
