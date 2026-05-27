@@ -21,7 +21,7 @@ signal discard
 
 func _ready() -> void:
 	for slot in slots:
-		slot.discard_request.connect(_on_slot_discard_request)
+		slot.discard_request.connect(_on_queue_button_pressed)
 	for button in buttons:
 		button.pressed.connect(_on_queue_button_pressed.bind(button))
 		button.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -41,7 +41,7 @@ func is_full() -> bool:
 	return open_slots().is_empty()
 
 
-# methods
+# methods - take care, tracking card data in two places here, pull card data here later?
 func add_card(card: CardResource) -> void:
 	if is_full():
 		queue_is_full.emit()
@@ -56,6 +56,8 @@ func add_card(card: CardResource) -> void:
 func remove_card(button:Button) -> void:
 	var b = button.name.lstrip("Button")
 	var s = get_node("VBoxContainer/CardQueue/Slot" + b)
+	var card = s.card
+	discard.emit(card)
 	button.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	button.modulate.a = 0.0
 	var tw = s.remove_out()
@@ -63,8 +65,6 @@ func remove_card(button:Button) -> void:
 
 
 # handlers
-func _on_slot_discard_request(card: CardResource) -> void:
-	discard.emit(card)
 
 func _on_queue_button_pressed(button) -> void:
 	remove_card(button)
