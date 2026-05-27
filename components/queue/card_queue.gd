@@ -2,24 +2,28 @@ class_name CardQueue
 extends MarginContainer
 
 @onready var slots:Array[QueueSlot] = [
-	$VBoxContainer/CardQueue/Slot0,
 	$VBoxContainer/CardQueue/Slot1,
 	$VBoxContainer/CardQueue/Slot2,
 	$VBoxContainer/CardQueue/Slot3,
-	$VBoxContainer/CardQueue/Slot4]
+	$VBoxContainer/CardQueue/Slot4,
+	$VBoxContainer/CardQueue/Slot5]
 
-@onready var button0: Button = $VBoxContainer/ButtonQueue/Button0
-@onready var button1: Button = $VBoxContainer/ButtonQueue/Button1
-@onready var button2: Button = $VBoxContainer/ButtonQueue/Button2
-@onready var button3: Button = $VBoxContainer/ButtonQueue/Button3
-@onready var button4: Button = $VBoxContainer/ButtonQueue/Button4
-
+@onready var buttons:Array[Button] = [
+	$VBoxContainer/ButtonQueue/Button1,
+	$VBoxContainer/ButtonQueue/Button2,
+	$VBoxContainer/ButtonQueue/Button3,
+	$VBoxContainer/ButtonQueue/Button4,
+	$VBoxContainer/ButtonQueue/Button5
+]
+ 
 signal queue_is_full
 signal discard
 
 func _ready() -> void:
 	for slot in slots:
 		slot.discard_request.connect(_on_slot_discard_request)
+	for button in buttons:
+		button.pressed.connect(_on_queue_button_pressed.bind(button))
 
 # queries
 func open_slots() -> Array:
@@ -49,21 +53,6 @@ func add_card(card: CardResource) -> void:
 func _on_slot_discard_request(card: CardResource) -> void:
 	discard.emit(card)
 
-func _on_button_0_pressed() -> void:
-	print()
 
-
-func _on_button_1_pressed() -> void:
-	pass # Replace with function body.
-
-
-func _on_button_2_pressed() -> void:
-	pass # Replace with function body.
-
-
-func _on_button_3_pressed() -> void:
-	pass # Replace with function body.
-
-
-func _on_button_4_pressed() -> void:
-	pass # Replace with function body.
+func _on_queue_button_pressed(button) -> void:
+	print(button.name)

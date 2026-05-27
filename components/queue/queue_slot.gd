@@ -13,7 +13,7 @@ signal discard_request(card: CardResource)
 
 func _ready() -> void:
 	clear()
-	drop_in()  # no more _rest_pos needed
+	drop_in()
 
 func drop_in() -> void:
 	icon_rect.position.y = drop_offset.y  # start offset
@@ -34,8 +34,6 @@ func assign(data: CardResource) -> void:
 
 func clear() -> void:
 	card = null
-	# if title: title.text = ""
-	# if description: description.text = ""
 	if icon_rect: icon_rect.modulate.a = 0.0
 
 func _apply_icon(texture: Texture2D) -> void:
