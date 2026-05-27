@@ -8,18 +8,22 @@ class_name QueueSlot
 
 var card: CardResource = null
 var _rest_pos: Vector2
+var _active_tween: Tween = null
+
+
+# flags
+var is_clearing:bool = false
 
 signal discard_request(card: CardResource)
 
 
 func _ready() -> void:
 	clear()
-	drop_in()
 
 
 # queries
 func is_empty() -> bool:
-	return card == null
+	return card == null and not is_clearing
 
 
 # data methods
@@ -49,17 +53,25 @@ func _on_button_pressed() -> void:
 
 # visual effect methods
 func drop_in() -> void:
-	icon_rect.position.y = drop_offset.y  # start offset
-	var tw = create_tween()
-	tw.set_ease(Tween.EASE_OUT)
-	tw.set_trans(Tween.TRANS_BOUNCE)
-	tw.tween_property(icon_rect, "position", Vector2.ZERO, duration)
+	_kill_tween()
+	icon_rect.position.y = drop_offset.y
+	icon_rect.modulate.a = 1.0  # ensure alpha is reset before animating in
+	_active_tween = create_tween()
+	_active_tween.set_ease(Tween.EASE_OUT)
+	_active_tween.set_trans(Tween.TRANS_BOUNCE)
+	_active_tween.tween_property(icon_rect, "position", Vector2.ZERO, duration)
 
 func remove_out() -> Tween:
-	var tw = create_tween()
-	tw.set_ease(Tween.EASE_IN)
-	tw.set_trans(Tween.TRANS_BACK)
-	tw.set_parallel(true)
-	tw.tween_property(icon_rect, "position", Vector2(0, drop_offset.y * -1), duration * 0.6)
-	tw.tween_property(icon_rect, "modulate:a", 0.0, duration * 0.5)
-	return tw
+	_kill_tween()
+	_active_tween = create_tween()
+	_active_tween.set_ease(Tween.EASE_IN)
+	_active_tween.set_trans(Tween.TRANS_BACK)
+	_active_tween.set_parallel(true)
+	_active_tween.tween_property(icon_rect, "position", Vector2(0, drop_offset.y * -1), duration * 0.6)
+	_active_tween.tween_property(icon_rect, "modulate:a", 0.0, duration * 0.5)
+	return _active_tween
+
+func _kill_tween() -> void:
+	if _active_tween and _active_tween.is_running():
+		_active_tween.kill()
+	_active_tween = null

@@ -19,6 +19,7 @@ layout_mode = 2
 [node name="CardQueue" type="HBoxContainer" parent="VBoxContainer" unique_id=870833839]
 layout_mode = 2
 size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
 
 [node name="Slot1" parent="VBoxContainer/CardQueue" unique_id=1662744499 instance=ExtResource("2_nx0cm")]
 layout_mode = 2

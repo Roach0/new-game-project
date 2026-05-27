@@ -46,8 +46,9 @@ func add_card(card: CardResource) -> void:
 	if is_full():
 		queue_is_full.emit()
 		return
-	var slot = next_open_slot()[0]
-	var button = next_open_slot()[1]
+	var next = next_open_slot()
+	var slot = next[0]
+	var button = next[1]
 	if slot:
 		slot.assign(card)
 		button.mouse_filter = Control.MOUSE_FILTER_STOP
@@ -60,8 +61,12 @@ func remove_card(button:Button) -> void:
 	discard.emit(card)
 	button.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	button.modulate.a = 0.0
+	s.is_clearing = true
 	var tw = s.remove_out()
-	tw.tween_callback(s.clear)
+	tw.tween_callback(func():
+		s.clear()
+		s.is_clearing = false
+		)
 
 
 # handlers

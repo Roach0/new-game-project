@@ -1,7 +1,7 @@
 shader_type canvas_item;
 
 uniform float pixel_size : hint_range(1.0, 32.0) = 6.0;
-uniform vec2 base_resolution = vec2(512.0, 512.0); // match your SubViewport size
+uniform vec2 base_resolution = vec2(512.0, 512.0);
 
 void fragment() {
     vec2 current_size = vec2(textureSize(TEXTURE, 0));
