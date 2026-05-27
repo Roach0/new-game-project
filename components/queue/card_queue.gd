@@ -24,6 +24,8 @@ func _ready() -> void:
 		slot.discard_request.connect(_on_slot_discard_request)
 	for button in buttons:
 		button.pressed.connect(_on_queue_button_pressed.bind(button))
+		button.mouse_filter = Control.MOUSE_FILTER_IGNORE
+
 
 # queries
 func open_slots() -> Array:
@@ -38,6 +40,7 @@ func next_open_slot() -> Array:
 func is_full() -> bool:
 	return open_slots().is_empty()
 
+
 # methods
 func add_card(card: CardResource) -> void:
 	if is_full():
@@ -47,19 +50,21 @@ func add_card(card: CardResource) -> void:
 	var button = next_open_slot()[1]
 	if slot:
 		slot.assign(card)
+		button.mouse_filter = Control.MOUSE_FILTER_STOP
 		button.modulate.a = 1.0
 
 func remove_card(button:Button) -> void:
 	var b = button.name.lstrip("Button")
 	var s = get_node("VBoxContainer/CardQueue/Slot" + b)
+	button.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	button.modulate.a = 0.0
 	var tw = s.remove_out()
 	tw.tween_callback(s.clear)
 
+
 # handlers
 func _on_slot_discard_request(card: CardResource) -> void:
 	discard.emit(card)
-
 
 func _on_queue_button_pressed(button) -> void:
 	remove_card(button)
