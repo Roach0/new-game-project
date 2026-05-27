@@ -1,69 +1,30 @@
 [gd_scene format=3 uid="uid://b68ke838cjr7b"]
 
 [ext_resource type="Script" uid="uid://yyywme8y3taq" path="res://components/queue/queue_slot.gd" id="1_e7y77"]
-[ext_resource type="Script" uid="uid://ca2xi1aivhyi" path="res://components/queue/label_set.gd" id="2_01m2u"]
 [ext_resource type="Texture2D" uid="uid://cjvsfvwdm7y3h" path="res://assets/slot_icons/RPG_Stat_Strength_Fist_Melee_Attack.png" id="2_g17gj"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g17gj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nx0cm"]
 
 [node name="QueueSlot" type="AspectRatioContainer" unique_id=1992712346]
 custom_minimum_size = Vector2(100, 100)
-anchors_preset = -1
-anchor_right = 0.17400001
-anchor_bottom = 0.35000002
-offset_right = -0.4480133
-offset_bottom = 0.19998169
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-script = ExtResource("1_e7y77")
-
-[node name="Layout" type="VBoxContainer" parent="." unique_id=628001938]
-layout_mode = 2
-
-[node name="Title" type="Label" parent="Layout" unique_id=2097696200]
-visible = false
-layout_mode = 2
-text = "Example"
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("2_01m2u")
-
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Layout" unique_id=514793832]
-layout_mode = 2
-size_flags_vertical = 3
-ratio = 0.227
-
-[node name="BG" type="TextureRect" parent="Layout/AspectRatioContainer" unique_id=1155519685]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("2_g17gj")
-stretch_mode = 5
-
-[node name="Panel" type="Panel" parent="Layout" unique_id=1216425545]
-visible = false
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.4
-theme_override_styles/panel = SubResource("StyleBoxEmpty_g17gj")
-
-[node name="Description" type="Label" parent="Layout/Panel" unique_id=858082969]
-visible = false
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Example"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-script = ExtResource("2_01m2u")
+size_flags_horizontal = 6
+size_flags_vertical = 4
+script = ExtResource("1_e7y77")
+
+[node name="Layout" type="VBoxContainer" parent="." unique_id=628001938]
+layout_mode = 2
+
+[node name="BG" type="TextureRect" parent="Layout" unique_id=1155519685]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_g17gj")
+stretch_mode = 5
 
 [node name="Button" type="Button" parent="." unique_id=591520108]
 visible = false
