@@ -9,3 +9,4 @@ enum ExecutionType {
 
 @export var execution_type: ExecutionType = ExecutionType.PASSIVE
 @export var value: int = 0
+@export var duration: int = 0

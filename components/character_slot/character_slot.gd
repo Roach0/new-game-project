@@ -9,26 +9,38 @@ class_name CharacterSlot
 @onready var Nerve : ProgressBar = $HBoxContainer/Nerve
 @onready var Alert : ProgressBar = $HBoxContainer/Alert
 
-var encounter_type: CharacterResource = null
+signal took_damage
+
+var character: CharacterResource = null
 
 func _ready() -> void:
 	clear()
 
 # queries
 func is_empty() -> bool:
-	return encounter_type == null
+	return character == null
 
-# methods
+# data methods
 func clear() -> void:
-	encounter_type = null
+	character = null
 	title.text = ""   # needs .text
 	state.text = "" 
 
+func update_condition(value) -> void:
+	Condition.value += value
+	if value < 0:
+		damaged(value)
+	return
+
+# behaviour methods
+func damaged(value) -> void:
+	pass
+
 #scene build
-func setup(character: CharacterResource) -> void:
+func setup(c: CharacterResource) -> void:
 	if character == null:
 		return
-	encounter_type = character
+	character = c
 	title.text = "_" + character.name
 	state.text = CharacterResource.State.keys()[character.state].to_lower() + "_"
 	Condition.value = character.condition
