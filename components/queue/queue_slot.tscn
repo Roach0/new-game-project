@@ -44,11 +44,14 @@ size_flags_vertical = 3
 texture = ExtResource("2_g17gj")
 stretch_mode = 5
 
-[node name="Panel" type="Panel" parent="." unique_id=1216425545]
+[node name="Panel" type="Panel" parent="Layout" unique_id=1216425545]
+visible = false
 layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.4
 theme_override_styles/panel = SubResource("StyleBoxEmpty_g17gj")
 
-[node name="Description" type="Label" parent="Panel" unique_id=858082969]
+[node name="Description" type="Label" parent="Layout/Panel" unique_id=858082969]
 visible = false
 layout_mode = 1
 anchors_preset = 15

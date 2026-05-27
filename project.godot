@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 Global="*uid://c6j1gj5xr2jsj"
 
+[display]
+
+window/size/resizable=false
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

@@ -28,9 +28,6 @@ layout_mode = 2
 [node name="Slot4" parent="." unique_id=969676031 instance=ExtResource("2_nx0cm")]
 layout_mode = 2
 
-[node name="Slot5" parent="." unique_id=804329884 instance=ExtResource("2_nx0cm")]
-layout_mode = 2
-
 [node name="VSeparator2" type="VSeparator" parent="." unique_id=1135292173]
 layout_mode = 2
 theme_override_constants/separation = 166

@@ -2,7 +2,7 @@ extends AspectRatioContainer
 class_name QueueSlot
 
 @onready var title = $Layout/Title
-@onready var description = $Panel/Description
+@onready var description = $Layout/Panel/Description
 @onready var icon_rect = $Layout/AspectRatioContainer/BG
 @onready var button = $Button
 
@@ -16,17 +16,14 @@ signal discard_request(card: CardResource)
 
 func _ready() -> void:
 	clear()
-	await get_tree().process_frame
-	_rest_pos = position
-	position = _rest_pos + drop_offset
-	drop_in()
+	drop_in()  # no more _rest_pos needed
 
 func drop_in() -> void:
-	position = _rest_pos + drop_offset 
-	var tw: Tween = create_tween()
+	icon_rect.position.y = drop_offset.y  # start offset
+	var tw = create_tween()
 	tw.set_ease(Tween.EASE_OUT)
 	tw.set_trans(Tween.TRANS_BOUNCE)
-	tw.tween_property(self, "position", _rest_pos, duration)
+	tw.tween_property(icon_rect, "position", Vector2.ZERO, duration)
 
 func is_empty() -> bool:
 	return card == null

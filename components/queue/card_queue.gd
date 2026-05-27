@@ -1,7 +1,7 @@
 class_name CardQueue
 extends HBoxContainer
 
-@onready var slots:Array[QueueSlot] = [$Slot0,$Slot1,$Slot2,$Slot3,$Slot4,$Slot5]
+@onready var slots:Array[QueueSlot] = [$Slot0,$Slot1,$Slot2,$Slot3,$Slot4]
 
 signal queue_is_full
 signal discard
