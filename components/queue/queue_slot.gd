@@ -55,7 +55,7 @@ func _on_button_pressed() -> void:
 func drop_in() -> void:
 	_kill_tween()
 	icon_rect.position.y = drop_offset.y
-	icon_rect.modulate.a = 1.0  # ensure alpha is reset before animating in
+	icon_rect.modulate.a = 1.0
 	_active_tween = create_tween()
 	_active_tween.set_ease(Tween.EASE_OUT)
 	_active_tween.set_trans(Tween.TRANS_BOUNCE)
