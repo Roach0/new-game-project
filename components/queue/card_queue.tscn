@@ -44,25 +44,30 @@ size_flags_vertical = 3
 
 [node name="Button1" type="Button" parent="VBoxContainer/ButtonQueue" unique_id=1710576953]
 modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(100, 60)
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Button2" type="Button" parent="VBoxContainer/ButtonQueue" unique_id=2063487148]
 modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(100, 60)
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Button3" type="Button" parent="VBoxContainer/ButtonQueue" unique_id=919777195]
 modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(100, 60)
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Button4" type="Button" parent="VBoxContainer/ButtonQueue" unique_id=1185616039]
 modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(100, 60)
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Button5" type="Button" parent="VBoxContainer/ButtonQueue" unique_id=116231081]
 modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(100, 60)
 layout_mode = 2
 size_flags_horizontal = 3
