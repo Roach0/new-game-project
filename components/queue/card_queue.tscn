@@ -11,6 +11,8 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_right = 300
 script = ExtResource("1_3ncrb")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1452188921]

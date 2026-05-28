@@ -7,7 +7,6 @@ class_name QueueSlot
 @export var duration: float = 0.55
 
 var card: CardResource = null
-var _rest_pos: Vector2
 var _active_tween: Tween = null
 
 
