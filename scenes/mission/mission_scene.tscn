@@ -49,7 +49,7 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_ewe2u")
 
 [node name="CardQueue" parent="MarginContainer/Layout" unique_id=870833839 instance=ExtResource("2_fmubs")]
 layout_mode = 2
-size_flags_stretch_ratio = 0.84
+size_flags_stretch_ratio = 0.6
 
 [node name="---2" type="HSeparator" parent="MarginContainer/Layout" unique_id=608728839]
 layout_mode = 2
@@ -60,7 +60,7 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_xorw8")
 [node name="PlayerPanel" type="HBoxContainer" parent="MarginContainer/Layout" unique_id=883461242]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.73
+size_flags_stretch_ratio = 0.6
 
 [node name="VSeparator2" type="VSeparator" parent="MarginContainer/Layout/PlayerPanel" unique_id=1872571694]
 layout_mode = 2
