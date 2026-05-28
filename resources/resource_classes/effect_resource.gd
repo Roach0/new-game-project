@@ -1,12 +1,19 @@
 class_name EffectResource
 extends Resource
 
-enum ExecutionType { 
-	STAGING,
-	PASSIVE,
-	ACTIVE
+enum Trigger { 
+	INSTANT,
+	PER_TURN,
+	WHILE_PRESENT
 }
 
-@export var execution_type: ExecutionType = ExecutionType.PASSIVE
-@export var value: int = 0
+enum Target {
+	SINGLE,
+	SELF,
+	ALL_ENEMIES,
+	SLOTS
+}
+
+@export var timing: Trigger
+@export var target: Target
 @export var duration: int = 0

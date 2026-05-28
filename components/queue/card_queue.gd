@@ -6,7 +6,8 @@ extends MarginContainer
 	$VBoxContainer/CardQueue/Slot2,
 	$VBoxContainer/CardQueue/Slot3,
 	$VBoxContainer/CardQueue/Slot4,
-	$VBoxContainer/CardQueue/Slot5]
+	$VBoxContainer/CardQueue/Slot5
+	]
 
 @onready var buttons:Array[Button] = [
 	$VBoxContainer/ButtonQueue/Button1,
