@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://lfpqnva6jx75"]
+
+[ext_resource type="Texture2D" uid="uid://dj64kfsnwa28j" path="res://components/viewport_3d/textures/Character_21_Police.png" id="1_u22tr"]
+
+[resource]
+resource_name = "Character_21_Police"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_u22tr")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0
