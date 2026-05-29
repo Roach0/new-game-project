@@ -4,7 +4,8 @@ extends Resource
 enum Timing { IMMEDIATE, PERSISTENT, CLICK }
 
 @export var timing: Timing
-@export var description: String
+@export var effect_description: String
+
 
 # Override in subclasses
 func on_enqueue(slot: QueueSlot) -> void:
