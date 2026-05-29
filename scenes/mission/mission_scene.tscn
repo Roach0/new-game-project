@@ -76,12 +76,12 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.6
 
-[node name="VSeparator2" type="VSeparator" parent="MarginContainer/Layout/PlayerPanel" unique_id=1872571694]
+[node name="---3" type="VSeparator" parent="MarginContainer/Layout/PlayerPanel" unique_id=1872571694]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/separator = SubResource("StyleBoxEmpty_wull8")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Layout/PlayerPanel/VSeparator2" unique_id=2109085600]
+[node name="Player" type="HBoxContainer" parent="MarginContainer/Layout/PlayerPanel/---3" unique_id=2109085600]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -89,7 +89,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Condition" type="ProgressBar" parent="MarginContainer/Layout/PlayerPanel/VSeparator2/HBoxContainer" unique_id=1355469685]
+[node name="Condition" type="ProgressBar" parent="MarginContainer/Layout/PlayerPanel/---3/Player" unique_id=1355469685]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -97,7 +97,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_ewe2u")
 value = 100.0
 fill_mode = 3
 
-[node name="Energy" type="ProgressBar" parent="MarginContainer/Layout/PlayerPanel/VSeparator2/HBoxContainer" unique_id=1949426206]
+[node name="Energy" type="ProgressBar" parent="MarginContainer/Layout/PlayerPanel/---3/Player" unique_id=1949426206]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -105,7 +105,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_xorw8")
 value = 50.0
 fill_mode = 3
 
-[node name="Nerve" type="ProgressBar" parent="MarginContainer/Layout/PlayerPanel/VSeparator2/HBoxContainer" unique_id=890438764]
+[node name="Nerve" type="ProgressBar" parent="MarginContainer/Layout/PlayerPanel/---3/Player" unique_id=890438764]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -113,7 +113,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_wull8")
 value = 50.0
 fill_mode = 3
 
-[node name="Accuracy" type="ProgressBar" parent="MarginContainer/Layout/PlayerPanel/VSeparator2/HBoxContainer" unique_id=2080639364]
+[node name="Accuracy" type="ProgressBar" parent="MarginContainer/Layout/PlayerPanel/---3/Player" unique_id=2080639364]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -121,7 +121,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_ymtiw")
 value = 50.0
 fill_mode = 3
 
-[node name="VSeparator" type="VSeparator" parent="MarginContainer/Layout/PlayerPanel/VSeparator2/HBoxContainer" unique_id=1966669632]
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/Layout/PlayerPanel/---3/Player" unique_id=1966669632]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.0
@@ -132,7 +132,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="VSeparator" type="VSeparator" parent="MarginContainer/Layout/PlayerPanel" unique_id=1496289170]
+[node name="---4" type="VSeparator" parent="MarginContainer/Layout/PlayerPanel" unique_id=1496289170]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/separator = SubResource("StyleBoxEmpty_ymtiw")
