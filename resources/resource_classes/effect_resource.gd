@@ -8,10 +8,10 @@ enum Trigger {
 }
 
 enum Target {
-	SINGLE,
+	CHARACTER,
 	SELF,
 	ALL_ENEMIES,
-	SLOTS
+	SLOT
 }
 
 @export var timing: Trigger

@@ -74,3 +74,6 @@ func _kill_tween() -> void:
 	if _active_tween and _active_tween.is_running():
 		_active_tween.kill()
 	_active_tween = null
+
+
+# effect methods

@@ -16,7 +16,7 @@ extends MarginContainer
 	$VBoxContainer/ButtonQueue/Button4,
 	$VBoxContainer/ButtonQueue/Button5]
  
-@onready var effects_queue:Array[]
+@onready var effects_queue:Array
 
 signal queue_is_full
 signal discard
