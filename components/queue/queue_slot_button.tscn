@@ -24,20 +24,17 @@ grow_vertical = 2
 [node name="Target" type="Label" parent="VBoxContainer" unique_id=1140910753]
 layout_mode = 2
 size_flags_vertical = 6
-text = "Target"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Trigger" type="Label" parent="VBoxContainer" unique_id=1622518525]
 layout_mode = 2
 size_flags_vertical = 6
-text = "Enemy"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Effect" type="Label" parent="VBoxContainer" unique_id=1721510390]
 layout_mode = 2
 size_flags_vertical = 6
-text = "- 2 Condition"
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -1,20 +1,19 @@
 extends Button
 
-
 @onready var targetLabel: Label = $VBoxContainer/Target
 @onready var triggerLabel: Label = $VBoxContainer/Trigger
 @onready var effectLabel: Label = $VBoxContainer/Effect
 
-var target: String
-var trigger: String
-var effect: String
+var target: String = "":
+	set(value): target = value; targetLabel.text = value
 
-func _ready() -> void:
-	target = targetLabel.text
-	trigger = triggerLabel.text
-	effect = effectLabel.text
+var trigger: String = "":
+	set(value): trigger = value; triggerLabel.text = value
 
-func update(tar:String,tri:String,eff:String):
+var effect: String = "":
+	set(value): effect = value; effectLabel.text = value
+
+func update(tar: String, tri: String, eff: String) -> void:
 	target = tar
 	trigger = tri
 	effect = eff

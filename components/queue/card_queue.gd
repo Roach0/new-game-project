@@ -57,7 +57,7 @@ func add_card(card: CardResource) -> void:
 		button.mouse_filter = Control.MOUSE_FILTER_STOP
 		button.modulate.a = 1.0
 
-func remove_card(button:Button) -> void:
+func remove_card(button:Button) -> void: # might not be updated to clear button labels
 	var b = button.name.lstrip("Button")
 	var s = get_node("VBoxContainer/CardQueue/Slot" + b)
 	var card = s.card
