@@ -1,19 +1,22 @@
 class_name EffectResource
 extends Resource
 
-enum Trigger { 
-	INSTANT,
-	PER_TURN,
-	WHILE_PRESENT
-}
+enum Timing { IMMEDIATE, PERSISTENT, CLICK }
 
-enum Target {
-	CHARACTER,
-	SELF,
-	ALL_ENEMIES,
-	SLOT
-}
+@export var timing: Timing
+@export var description: String
 
-@export var timing: Trigger
-@export var target: Target
-@export var duration: int = 0
+# Override in subclasses
+func on_enqueue(slot: QueueSlot) -> void:
+	pass
+
+func on_dequeue(slot: QueueSlot) -> void:
+	pass
+
+# Only called for CLICK timing, after target is chosen
+func on_resolve(slot: QueueSlot, target: CharacterSlot) -> void:
+	pass
+
+# Only called for PERSISTENT, once per turn tick if you need it
+func on_turn_end(slot: QueueSlot) -> void:
+	pass

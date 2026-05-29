@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bg1wta0d45iiu" path="res://components/queue/card_queue.gd" id="1_3ncrb"]
 [ext_resource type="PackedScene" uid="uid://b68ke838cjr7b" path="res://components/queue/queue_slot.tscn" id="2_nx0cm"]
+[ext_resource type="PackedScene" uid="uid://b8o3lau37bbwm" path="res://components/queue/queue_slot_button.tscn" id="3_4kg0d"]
 
 [node name="QueueManager" type="MarginContainer" unique_id=476772842]
 anchors_preset = 15
@@ -42,32 +43,17 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button1" type="Button" parent="VBoxContainer/ButtonQueue" unique_id=1710576953]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(100, 60)
+[node name="Button1" parent="VBoxContainer/ButtonQueue" unique_id=1931200414 instance=ExtResource("3_4kg0d")]
 layout_mode = 2
-size_flags_horizontal = 3
 
-[node name="Button2" type="Button" parent="VBoxContainer/ButtonQueue" unique_id=2063487148]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(100, 60)
+[node name="Button2" parent="VBoxContainer/ButtonQueue" unique_id=1233114863 instance=ExtResource("3_4kg0d")]
 layout_mode = 2
-size_flags_horizontal = 3
 
-[node name="Button3" type="Button" parent="VBoxContainer/ButtonQueue" unique_id=919777195]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(100, 60)
+[node name="Button3" parent="VBoxContainer/ButtonQueue" unique_id=1189725911 instance=ExtResource("3_4kg0d")]
 layout_mode = 2
-size_flags_horizontal = 3
 
-[node name="Button4" type="Button" parent="VBoxContainer/ButtonQueue" unique_id=1185616039]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(100, 60)
+[node name="Button4" parent="VBoxContainer/ButtonQueue" unique_id=1386147302 instance=ExtResource("3_4kg0d")]
 layout_mode = 2
-size_flags_horizontal = 3
 
-[node name="Button5" type="Button" parent="VBoxContainer/ButtonQueue" unique_id=116231081]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(100, 60)
+[node name="Button5" parent="VBoxContainer/ButtonQueue" unique_id=615997344 instance=ExtResource("3_4kg0d")]
 layout_mode = 2
-size_flags_horizontal = 3
