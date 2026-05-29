@@ -53,7 +53,7 @@ func add_card(card: CardResource) -> void:
 	var button = next[1]
 	if slot:
 		slot.assign(card)
-		button.update(card.card_name,card.description,card.effects)
+		button.update(card.target,card.trigger_description,card.effect_description)
 		button.mouse_filter = Control.MOUSE_FILTER_STOP
 		button.modulate.a = 1.0
 

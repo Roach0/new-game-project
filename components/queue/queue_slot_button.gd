@@ -13,3 +13,8 @@ func _ready() -> void:
 	target = targetLabel.text
 	trigger = triggerLabel.text
 	effect = effectLabel.text
+
+func update(tar:String,tri:String,eff:String):
+	target = tar
+	trigger = tri
+	effect = eff
