@@ -11,7 +11,6 @@ enum Target {
 }
 
 enum Trigger {
-	INSTANT,
 	ON_DRAW,
 	ON_DISCARD,
 	ON_TURN_END,
@@ -22,7 +21,7 @@ enum Trigger {
 @export var card_name: String = ""
 @export var icon: Texture2D
 var source_deck_id: String = ""
-@export var trigger: Trigger = Trigger.INSTANT
+@export var trigger: Trigger = Trigger.ON_DRAW
 @export var effect_description: String = "Does a thing"
 
 # effects stuff
@@ -40,9 +39,9 @@ static func target_label(t: Target) -> String:
 
 static func trigger_label(t: Trigger) -> String:
 	match t:
-		Trigger.INSTANT: return "Instant"
-		Trigger.ON_DRAW: return "On Draw"
-		Trigger.ON_DISCARD: return "On Discard"
-		Trigger.ON_TURN_END: return "On Turn End"
+		Trigger.ON_DRAW: return "Draw"
+		Trigger.ON_DISCARD: return "Discard"
+		Trigger.ON_TURN_END: return "Turn End"
+		Trigger.ON_CLICK: return "Click"
 		Trigger.WHILE: return "While"
 		_: return "Unknown"

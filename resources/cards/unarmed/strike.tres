@@ -1,6 +1,5 @@
 [gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://o5r23yq3wb1r"]
 
-[ext_resource type="Script" uid="uid://c71xpo357466s" path="res://resources/resource_classes/effect_resource.gd" id="1_jvv6e"]
 [ext_resource type="Texture2D" uid="uid://cjvsfvwdm7y3h" path="res://assets/slot_icons/RPG_Stat_Strength_Fist_Melee_Attack.png" id="2_sivcu"]
 [ext_resource type="Script" uid="uid://ba27sa137jhjv" path="res://resources/resource_classes/card_resource.gd" id="3_wq06o"]
 
@@ -8,7 +7,7 @@
 script = ExtResource("3_wq06o")
 card_name = "Strike"
 icon = ExtResource("2_sivcu")
-trigger = 4
-effect_description = ""
+trigger = 3
+effect_description = "- x Condition"
 target = 3
 metadata/_custom_type_script = "uid://ba27sa137jhjv"

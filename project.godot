@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*uid://c6j1gj5xr2jsj"
-EffectLibrary="*uid://btd12ux6i81rn"
 
 [display]
 
