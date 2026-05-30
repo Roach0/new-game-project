@@ -1,32 +1,7 @@
 [gd_scene format=3 uid="uid://b8o3lau37bbwm"]
 
 [ext_resource type="Script" uid="uid://cn2vhpjpdoyyo" path="res://components/queue/queue_slot_button.gd" id="1_ama6h"]
-
-[sub_resource type="GDScript" id="GDScript_ama6h"]
-script/source = "extends Label
-
-@export var max_font_size: int = 16
-@export var min_font_size: int = 6
-
-func _ready():
-	resized.connect(_fit_text)
-
-func _fit_text():
-	var available_width = size.x
-	if available_width <= 0:
-		return
-
-	var font = get_theme_font(\"font\")
-	var font_size = max_font_size  # renamed from 'size'
-
-	while font_size > min_font_size:
-		var text_width = font.get_string_size(text, HORIZONTAL_ALIGNMENT_LEFT, -1, font_size).x
-		if text_width <= available_width:
-			break
-		font_size -= 1
-
-	add_theme_font_size_override(\"font_size\", font_size)
-"
+[ext_resource type="Script" uid="uid://c6kol2yr0ojkb" path="res://components/queue/button_labels.gd" id="2_3st2n"]
 
 [node name="Button1" type="Button" unique_id=1931200414]
 modulate = Color(1, 1, 1, 0)
@@ -52,24 +27,24 @@ layout_mode = 2
 size_flags_vertical = 6
 horizontal_alignment = 1
 vertical_alignment = 1
-script = SubResource("GDScript_ama6h")
+script = ExtResource("2_3st2n")
 max_font_size = 12
-min_font_size = 2
+min_font_size = 3
 
 [node name="Trigger" type="Label" parent="VBoxContainer" unique_id=1622518525]
 layout_mode = 2
 size_flags_vertical = 6
 horizontal_alignment = 1
 vertical_alignment = 1
-script = SubResource("GDScript_ama6h")
+script = ExtResource("2_3st2n")
 max_font_size = 12
-min_font_size = 2
+min_font_size = 3
 
 [node name="Effect" type="Label" parent="VBoxContainer" unique_id=1721510390]
 layout_mode = 2
 size_flags_vertical = 6
 horizontal_alignment = 1
 vertical_alignment = 1
-script = SubResource("GDScript_ama6h")
+script = ExtResource("2_3st2n")
 max_font_size = 12
 min_font_size = 3

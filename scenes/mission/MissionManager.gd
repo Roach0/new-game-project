@@ -66,17 +66,15 @@ func resolve_effects(card: CardResource) -> void:
 		push_warning("resolve_effects: no effects on card '%s'" % card.card_name)
 		return
 	for effect in card.effects:
-		print("resolving effects...")
 		var targets := get_effect_targets(effect.target)
 		print(targets)
 		for target in targets:
 			effect.tick(target)
 
 func get_effect_targets(target: EffectResource.Target) -> Array:
-	print("target enum value: ", target, " | PLAYER = ", EffectResource.Target.PLAYER)
+	print("target enum value: ", target)
 	match target:
 		EffectResource.Target.PLAYER:
-			print("got effect target")
 			return [player]
 		EffectResource.Target.SELF:
 			return []  # current endpoint
