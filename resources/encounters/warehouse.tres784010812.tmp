@@ -2,9 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ig8sava42vh3" path="res://resources/resource_classes/character_resource.gd" id="1_aehy3"]
 [ext_resource type="Script" uid="uid://boabvq0fh74m8" path="res://resources/resource_classes/encounter_resource.gd" id="2_aehy3"]
-[ext_resource type="Resource" uid="uid://bhl1itdn4cb3p" path="res://resources/characters/guard.tres" id="2_n5nmo"]
 
 [resource]
 script = ExtResource("2_aehy3")
-characters = Array[ExtResource("1_aehy3")]([ExtResource("2_n5nmo"), ExtResource("2_n5nmo"), ExtResource("2_n5nmo"), ExtResource("2_n5nmo"), ExtResource("2_n5nmo"), ExtResource("2_n5nmo"), ExtResource("2_n5nmo"), ExtResource("2_n5nmo"), ExtResource("2_n5nmo"), ExtResource("2_n5nmo")])
 metadata/_custom_type_script = "uid://boabvq0fh74m8"

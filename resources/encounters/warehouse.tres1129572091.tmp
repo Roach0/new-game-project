@@ -6,5 +6,5 @@
 
 [resource]
 script = ExtResource("2_aehy3")
-characters = Array[ExtResource("1_aehy3")]([ExtResource("2_n5nmo"), ExtResource("2_n5nmo"), ExtResource("2_n5nmo"), ExtResource("2_n5nmo"), ExtResource("2_n5nmo"), ExtResource("2_n5nmo"), ExtResource("2_n5nmo"), ExtResource("2_n5nmo"), ExtResource("2_n5nmo"), ExtResource("2_n5nmo")])
+characters = Array[ExtResource("1_aehy3")]([ExtResource("2_n5nmo"), ExtResource("2_n5nmo"), ExtResource("2_n5nmo"), ExtResource("2_n5nmo")])
 metadata/_custom_type_script = "uid://boabvq0fh74m8"

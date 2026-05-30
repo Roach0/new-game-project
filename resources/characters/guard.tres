@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ig8sava42vh3" path="res://resources/resource_classes/character_resource.gd" id="1_p2ee3"]
 
 [resource]
+resource_local_to_scene = true
 script = ExtResource("1_p2ee3")
 name = "Guard"
 nerve = 50
