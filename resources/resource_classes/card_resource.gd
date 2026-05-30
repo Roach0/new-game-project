@@ -1,15 +1,6 @@
 extends Resource
 class_name CardResource
 
-enum Target {
-	SELF,
-	PLAYER,
-	QUEUE_GROUP,
-	QUEUE_POS,
-	ENCOUNTER,
-	# ENCOUNTER_GROUP
-}
-
 enum Trigger {
 	ON_DRAW,
 	ON_DISCARD,
@@ -20,21 +11,21 @@ enum Trigger {
 
 @export var card_name: String = ""
 @export var icon: Texture2D
-var source_deck_id: String = ""
 @export var trigger: Trigger = Trigger.ON_DRAW
 @export var effect_description: String = "Does a thing"
+@export var target_desc: String = "target_desc"
+var source_deck_id: String = ""
 
 # effects stuff
-@export var target: Target
 @export var effects: Array[EffectResource] = []
 
-static func target_label(t: Target) -> String:
+static func target_label(t: EffectResource.Target) -> String:
 	match t:
-		Target.SELF: return "This Card"
-		Target.PLAYER: return "Yourself"
-		Target.QUEUE_POS: return "Card Positions"
-		Target.QUEUE_GROUP: return "Card Group"
-		Target.ENCOUNTER: return "An Enemy"
+		EffectResource.Target.SELF: return "This Card"
+		EffectResource.Target.PLAYER: return "Yourself"
+		EffectResource.Target.QUEUE_POS: return "Card Positions"
+		EffectResource.Target.QUEUE_GROUP: return "Card Group"
+		EffectResource.Target.ENCOUNTER: return "An Enemy"
 		_: return "no_target"
 
 static func trigger_label(t: Trigger) -> String:
@@ -44,4 +35,4 @@ static func trigger_label(t: Trigger) -> String:
 		Trigger.ON_TURN_END: return "Turn End"
 		Trigger.ON_CLICK: return "Click"
 		Trigger.WHILE: return "While"
-		_: return "Unknown"
+		_: return "no_trigger"

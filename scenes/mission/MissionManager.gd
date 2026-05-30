@@ -65,18 +65,22 @@ func resolve_effects(card: CardResource) -> void:
 	if card.effects.is_empty():
 		push_warning("resolve_effects: no effects on card '%s'" % card.card_name)
 		return
-	var targets := get_effect_targets(card.target)
 	for effect in card.effects:
+		print("resolving effects...")
+		var targets := get_effect_targets(effect.target)
+		print(targets)
 		for target in targets:
 			effect.tick(target)
 
-func get_effect_targets(target: CardResource.Target) -> Array:
+func get_effect_targets(target: EffectResource.Target) -> Array:
+	print("target enum value: ", target, " | PLAYER = ", EffectResource.Target.PLAYER)
 	match target:
-		CardResource.Target.PLAYER:
+		EffectResource.Target.PLAYER:
+			print("got effect target")
 			return [player]
-		CardResource.Target.SELF:
+		EffectResource.Target.SELF:
 			return []  # current endpoint
-		CardResource.Target.ENCOUNTER:
+		EffectResource.Target.ENCOUNTER:
 			return []  # current endpoint
 		_:
 			push_warning("get_effect_targets: unhandled target type %d" % target)
