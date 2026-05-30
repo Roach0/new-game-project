@@ -43,7 +43,7 @@ func _on_draw_request(deck: Deck) -> void:
 	var card = deck.draw_card()
 	if card:
 		# add an if here later my boi
-		sort_effect(card)
+		resolve_effects(card)
 		queue.add_card(card)
 
 func _on_discard(card: CardResource) -> void:
@@ -61,18 +61,23 @@ func remove_deck(deck_id: String) -> void:
 			child.queue_free()
 			break
 
-func sort_effect(card: CardResource) -> void:
-	if not card.effect:
-		push_warning("sort_effect: no effect on card '%s'" % card.card_name)
+func resolve_effects(card: CardResource) -> void:
+	if card.effects.is_empty():
+		push_warning("resolve_effects: no effects on card '%s'" % card.card_name)
 		return
-	match card.trigger:
-		CardResource.Trigger.ON_DRAW:
-			match card.target:
-				CardResource.Target.PLAYER:
-					card.effect.tick(player)
-				CardResource.Target.SELF:
-					pass # handle later
-				CardResource.Target.ENCOUNTER:
-					pass # handle later
+	var targets := get_effect_targets(card.target)
+	for effect in card.effects:
+		for target in targets:
+			effect.tick(target)
+
+func get_effect_targets(target: CardResource.Target) -> Array:
+	match target:
+		CardResource.Target.PLAYER:
+			return [player]
+		CardResource.Target.SELF:
+			return []  # current endpoint
+		CardResource.Target.ENCOUNTER:
+			return []  # current endpoint
 		_:
-			pass # ON_CLICK etc handled elsewhere
+			push_warning("get_effect_targets: unhandled target type %d" % target)
+			return []

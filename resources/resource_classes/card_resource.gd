@@ -26,7 +26,7 @@ var source_deck_id: String = ""
 
 # effects stuff
 @export var target: Target
-@export var effect: EffectResource
+@export var effects: Array[EffectResource] = []
 
 static func target_label(t: Target) -> String:
 	match t:

@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://bwi3f03vnopsn"]
+
+[ext_resource type="Script" uid="uid://c3sh3redtpkft" path="res://scenes/mission/MissionManager.gd" id="1_fmubs"]
+[ext_resource type="PackedScene" uid="uid://d0jar4dpikg7l" path="res://components/queue/card_queue.tscn" id="2_fmubs"]
+[ext_resource type="Script" uid="uid://b103p7xpirkkf" path="res://scenes/mission/player.gd" id="3_xorw8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ewe2u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xorw8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wull8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ewe2u"]
+bg_color = Color(0.8156863, 0.16078432, 0.28627452, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xorw8"]
+bg_color = Color(0.2509804, 0.7529412, 0.5058824, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wull8"]
+bg_color = Color(0.1254902, 0.6509804, 0.6509804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ymtiw"]
+bg_color = Color(0.84705883, 0.81960785, 0.2784314, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sdilx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ymtiw"]
+
+[node name="MissionScene" type="Control" unique_id=1580007813]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fmubs")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1250902012]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Layout" type="VBoxContainer" parent="MarginContainer" unique_id=1294214604]
+layout_mode = 2
+
+[node name="EncounterSpace" type="MarginContainer" parent="MarginContainer/Layout" unique_id=26561254]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.67
+theme_override_constants/margin_bottom = 12
+
+[node name="sep1" type="HSeparator" parent="MarginContainer/Layout" unique_id=2034588967]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+theme_override_styles/separator = SubResource("StyleBoxEmpty_ewe2u")
+
+[node name="CardQueue" parent="MarginContainer/Layout" unique_id=870833839 instance=ExtResource("2_fmubs")]
+layout_mode = 2
+size_flags_stretch_ratio = 0.6
+
+[node name="sep2" type="HSeparator" parent="MarginContainer/Layout" unique_id=608728839]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+theme_override_styles/separator = SubResource("StyleBoxEmpty_xorw8")
+
+[node name="PlayerPanel" type="HBoxContainer" parent="MarginContainer/Layout" unique_id=883461242]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.6
+
+[node name="sep3" type="VSeparator" parent="MarginContainer/Layout/PlayerPanel" unique_id=1872571694]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxEmpty_wull8")
+
+[node name="Player" type="HBoxContainer" parent="MarginContainer/Layout/PlayerPanel/sep3" unique_id=2109085600]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_xorw8")
+
+[node name="Condition" type="ProgressBar" parent="MarginContainer/Layout/PlayerPanel/sep3/Player" unique_id=1355469685]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/fill = SubResource("StyleBoxFlat_ewe2u")
+value = 100.0
+fill_mode = 3
+
+[node name="Energy" type="ProgressBar" parent="MarginContainer/Layout/PlayerPanel/sep3/Player" unique_id=1949426206]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/fill = SubResource("StyleBoxFlat_xorw8")
+value = 50.0
+fill_mode = 3
+
+[node name="Nerve" type="ProgressBar" parent="MarginContainer/Layout/PlayerPanel/sep3/Player" unique_id=890438764]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/fill = SubResource("StyleBoxFlat_wull8")
+value = 50.0
+fill_mode = 3
+
+[node name="Accuracy" type="ProgressBar" parent="MarginContainer/Layout/PlayerPanel/sep3/Player" unique_id=2080639364]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/fill = SubResource("StyleBoxFlat_ymtiw")
+value = 50.0
+fill_mode = 3
+
+[node name="sep" type="VSeparator" parent="MarginContainer/Layout/PlayerPanel/sep3/Player" unique_id=1966669632]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+theme_override_styles/separator = SubResource("StyleBoxEmpty_sdilx")
+
+[node name="DeckContainer" type="HBoxContainer" parent="MarginContainer/Layout/PlayerPanel" unique_id=643053006]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="---4" type="VSeparator" parent="MarginContainer/Layout/PlayerPanel" unique_id=1496289170]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxEmpty_ymtiw")
