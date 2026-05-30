@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://domjr81ysswlf"]
+
+[ext_resource type="Resource" uid="uid://b4q5g24w78mri" path="res://resources/cards/unarmed/drag/drag_effect.tres" id="1_p8r6h"]
+[ext_resource type="Texture2D" uid="uid://ditbvqus5swyi" path="res://assets/slot_icons/Travel_Cigarette_Tobaco_Smoking.png" id="2_f5pih"]
+[ext_resource type="Script" uid="uid://ba27sa137jhjv" path="res://resources/resource_classes/card_resource.gd" id="3_7vu3q"]
+
+[resource]
+script = ExtResource("3_7vu3q")
+card_name = "Drag"
+icon = ExtResource("2_f5pih")
+effect_description = "Restore Nerve"
+target = 1
+effect = ExtResource("1_p8r6h")
+metadata/_custom_type_script = "uid://ba27sa137jhjv"

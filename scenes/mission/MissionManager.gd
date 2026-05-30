@@ -41,7 +41,7 @@ func _on_draw_request(deck: Deck) -> void:
 		return
 	var card = deck.draw_card()
 	if card:
-		sort_effects(card)
+		sort_effect(card)
 		queue.add_card(card)
 
 func _on_discard(card: CardResource) -> void:
@@ -59,5 +59,6 @@ func remove_deck(deck_id: String) -> void:
 			child.queue_free()
 			break
 
-func sort_effects(card:CardResource):
+func sort_effect(card:CardResource):
+	var effect = card.effect
 	pass

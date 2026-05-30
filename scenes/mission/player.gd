@@ -7,6 +7,8 @@ class_name Player
 @onready var nerve: ProgressBar = $Nerve
 @onready var accuracy: ProgressBar = $Accuracy
 
+
+
 func _ready() -> void:
 	pass
 

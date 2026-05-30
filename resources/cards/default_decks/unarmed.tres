@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DeckResource" format=3 uid="uid://c8apb6kogxi86"]
+
+[ext_resource type="Script" uid="uid://ba27sa137jhjv" path="res://resources/resource_classes/card_resource.gd" id="1_4lwok"]
+[ext_resource type="Script" uid="uid://bhoskfk2uo1s0" path="res://resources/resource_classes/deck_resource.gd" id="2_gx0kd"]
+[ext_resource type="Resource" uid="uid://domjr81ysswlf" path="res://resources/cards/unarmed/drag/drag.tres" id="4_gv4q0"]
+
+[resource]
+script = ExtResource("2_gx0kd")
+cards = Array[ExtResource("1_4lwok")]([ExtResource("4_gv4q0"), ExtResource("4_gv4q0"), ExtResource("4_gv4q0"), ExtResource("4_gv4q0"), ExtResource("4_gv4q0")])
+metadata/_custom_type_script = "uid://bhoskfk2uo1s0"

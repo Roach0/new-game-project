@@ -9,7 +9,6 @@ class_name CharacterSlot
 @onready var Nerve : ProgressBar = $HBoxContainer/Nerve
 @onready var Alert : ProgressBar = $HBoxContainer/Alert
 
-signal took_damage
 
 var character: CharacterResource = null
 

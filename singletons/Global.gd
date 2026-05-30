@@ -7,9 +7,8 @@ var _next_id: int = 1
 
 func _ready():
 	# testing loads
-	load_deck(preload("res://resources/default_decks/unarmed.tres"))
-	load_deck(preload("res://resources/default_decks/unarmed.tres"))
-	load_deck(preload("res://resources/default_decks/unarmed.tres"))
+	load_deck(preload("C:/Users/willi/OneDrive/Documents/new-game-project/resources/cards/default_decks/unarmed.tres"))
+	load_deck(preload("C:/Users/willi/OneDrive/Documents/new-game-project/resources/cards/default_decks/unarmed.tres"))
 	load_encounter(preload("res://resources/encounters/warehouse.tres"))
 
 func load_deck(deck: DeckResource) -> void:
