@@ -61,8 +61,18 @@ func remove_deck(deck_id: String) -> void:
 			child.queue_free()
 			break
 
-func sort_effect(card:CardResource):
-	var c = card
-	if str(c.target.keys()[PLAYER]) == "PLAYER":
-		c.effect.tick(player)
-	pass
+func sort_effect(card: CardResource) -> void:
+	if not card.effect:
+		push_warning("sort_effect: no effect on card '%s'" % card.card_name)
+		return
+	match card.trigger:
+		CardResource.Trigger.ON_DRAW:
+			match card.target:
+				CardResource.Target.PLAYER:
+					card.effect.tick(player)
+				CardResource.Target.SELF:
+					pass # handle later
+				CardResource.Target.ENCOUNTER:
+					pass # handle later
+		_:
+			pass # ON_CLICK etc handled elsewhere

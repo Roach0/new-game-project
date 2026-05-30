@@ -15,5 +15,9 @@ func _ready() -> void:
 # methods
 
 
-func modify_stat(stat: ProgressBar, value: int):
-	stat.value += value
+func modify_stat(stat: String, value: int):
+	var bar: ProgressBar = get(stat)
+	if bar == null:
+		push_warning("Player: no stat found for '%s'" % stat)
+		return
+	bar.value += value
