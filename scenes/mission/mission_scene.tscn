@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c3sh3redtpkft" path="res://scenes/mission/MissionManager.gd" id="1_fmubs"]
 [ext_resource type="PackedScene" uid="uid://d0jar4dpikg7l" path="res://components/queue/card_queue.tscn" id="2_fmubs"]
+[ext_resource type="Script" uid="uid://b103p7xpirkkf" path="res://scenes/mission/player.gd" id="3_xorw8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ewe2u"]
 
@@ -55,7 +56,7 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 1.67
 theme_override_constants/margin_bottom = 12
 
-[node name="---1" type="HSeparator" parent="MarginContainer/Layout" unique_id=2034588967]
+[node name="sep1" type="HSeparator" parent="MarginContainer/Layout" unique_id=2034588967]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.1
@@ -65,7 +66,7 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_ewe2u")
 layout_mode = 2
 size_flags_stretch_ratio = 0.6
 
-[node name="---2" type="HSeparator" parent="MarginContainer/Layout" unique_id=608728839]
+[node name="sep2" type="HSeparator" parent="MarginContainer/Layout" unique_id=608728839]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.1
@@ -76,20 +77,21 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.6
 
-[node name="---3" type="VSeparator" parent="MarginContainer/Layout/PlayerPanel" unique_id=1872571694]
+[node name="sep3" type="VSeparator" parent="MarginContainer/Layout/PlayerPanel" unique_id=1872571694]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/separator = SubResource("StyleBoxEmpty_wull8")
 
-[node name="Player" type="HBoxContainer" parent="MarginContainer/Layout/PlayerPanel/---3" unique_id=2109085600]
+[node name="Player" type="HBoxContainer" parent="MarginContainer/Layout/PlayerPanel/sep3" unique_id=2109085600]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("3_xorw8")
 
-[node name="Condition" type="ProgressBar" parent="MarginContainer/Layout/PlayerPanel/---3/Player" unique_id=1355469685]
+[node name="Condition" type="ProgressBar" parent="MarginContainer/Layout/PlayerPanel/sep3/Player" unique_id=1355469685]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -97,7 +99,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_ewe2u")
 value = 100.0
 fill_mode = 3
 
-[node name="Energy" type="ProgressBar" parent="MarginContainer/Layout/PlayerPanel/---3/Player" unique_id=1949426206]
+[node name="Energy" type="ProgressBar" parent="MarginContainer/Layout/PlayerPanel/sep3/Player" unique_id=1949426206]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -105,7 +107,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_xorw8")
 value = 50.0
 fill_mode = 3
 
-[node name="Nerve" type="ProgressBar" parent="MarginContainer/Layout/PlayerPanel/---3/Player" unique_id=890438764]
+[node name="Nerve" type="ProgressBar" parent="MarginContainer/Layout/PlayerPanel/sep3/Player" unique_id=890438764]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -113,7 +115,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_wull8")
 value = 50.0
 fill_mode = 3
 
-[node name="Accuracy" type="ProgressBar" parent="MarginContainer/Layout/PlayerPanel/---3/Player" unique_id=2080639364]
+[node name="Accuracy" type="ProgressBar" parent="MarginContainer/Layout/PlayerPanel/sep3/Player" unique_id=2080639364]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -121,7 +123,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_ymtiw")
 value = 50.0
 fill_mode = 3
 
-[node name="VSeparator" type="VSeparator" parent="MarginContainer/Layout/PlayerPanel/---3/Player" unique_id=1966669632]
+[node name="sep" type="VSeparator" parent="MarginContainer/Layout/PlayerPanel/sep3/Player" unique_id=1966669632]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.0

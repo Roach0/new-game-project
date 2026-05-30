@@ -1,6 +1,8 @@
 class_name EffectResource
 extends Resource
 
+# example: deal 3 damage
+
 enum Timing { IMMEDIATE, PERSISTENT, CLICK }
 
 @export var timing: Timing
