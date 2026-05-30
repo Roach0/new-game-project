@@ -3,6 +3,7 @@ extends Node
 @onready var queue: CardQueue = $MarginContainer/Layout/CardQueue
 @onready var deck_container = $MarginContainer/Layout/PlayerPanel/DeckContainer
 @onready var encounter_space = $MarginContainer/Layout/EncounterSpace
+@onready var player = $MarginContainer/Layout/PlayerPanel/sep3/Player
 
 var deck_scene = preload("res://components/deck/deck.tscn")
 var encounter_scene = preload("res://components/encounter/encounter.tscn")
@@ -41,6 +42,7 @@ func _on_draw_request(deck: Deck) -> void:
 		return
 	var card = deck.draw_card()
 	if card:
+		# add an if here later my boi
 		sort_effect(card)
 		queue.add_card(card)
 
@@ -60,5 +62,7 @@ func remove_deck(deck_id: String) -> void:
 			break
 
 func sort_effect(card:CardResource):
-	var effect = card.effect
+	var c = card
+	if str(c.target.keys()[PLAYER]) == "PLAYER":
+		c.effect.tick(player)
 	pass

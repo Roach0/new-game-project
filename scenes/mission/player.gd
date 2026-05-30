@@ -14,5 +14,6 @@ func _ready() -> void:
 
 # methods
 
+
 func modify_stat(stat: ProgressBar, value: int):
 	stat.value += value
