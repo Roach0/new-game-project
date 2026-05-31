@@ -2,11 +2,11 @@ extends Resource
 class_name CardResource
 
 enum Trigger {
-	ON_DRAW,
-	ON_DISCARD,
-	ON_TURN_END,
-	ON_CLICK,
-	WHILE
+	ON_DRAW = 0,
+	ON_DISCARD = 1,
+	ON_TURN_END = 2,
+	ON_CLICK = 3,
+	WHILE = 4
 }
 
 @export var card_name: String = ""
