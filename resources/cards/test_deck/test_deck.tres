@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ba27sa137jhjv" path="res://resources/resource_classes/card_resource.gd" id="1_hmxdq"]
 [ext_resource type="Script" uid="uid://bhoskfk2uo1s0" path="res://resources/resource_classes/deck_resource.gd" id="2_2togf"]
-[ext_resource type="Resource" uid="uid://domjr81ysswlf" path="res://resources/cards/unarmed/drag/drag_card.tres" id="2_yfvjq"]
+[ext_resource type="Resource" uid="uid://domjr81ysswlf" path="res://resources/cards/test_deck/drag/drag_card.tres" id="2_yfvjq"]
 
 [resource]
 script = ExtResource("2_2togf")

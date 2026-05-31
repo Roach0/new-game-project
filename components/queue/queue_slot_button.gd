@@ -1,4 +1,5 @@
 extends Button
+class_name QueueSlotButton
 
 @onready var targetLabel: Label = $VBoxContainer/Target
 @onready var triggerLabel: Label = $VBoxContainer/Trigger
