@@ -50,7 +50,9 @@ func _on_button_pressed() -> void:
 	clear()
 
 
-# visual effect methods
+
+
+# visuals
 func drop_in() -> void:
 	_kill_tween()
 	icon_rect.position.y = drop_offset.y
@@ -74,6 +76,3 @@ func _kill_tween() -> void:
 	if _active_tween and _active_tween.is_running():
 		_active_tween.kill()
 	_active_tween = null
-
-
-# effect methods

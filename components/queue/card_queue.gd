@@ -73,6 +73,11 @@ func remove_card(button:Button) -> void: # might not be updated to clear button 
 		s.is_clearing = false
 		)
 
+func lock_queue_slot(slot: QueueSlot) -> void:
+	var b = slot.name.lstrip("Slot")
+	var button = get_node("VBoxContainer/ButtonQueue/Button" + b)
+	button.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	button.modulate.a = 0.5
 
 # handlers
 
