@@ -1,5 +1,5 @@
-extends Resource
 class_name CardResource
+extends Resource
 
 enum Trigger {
 	ON_DRAW = 0,
@@ -8,16 +8,16 @@ enum Trigger {
 	WHILE = 3
 }
 
+var tags: Array[String] = []
 @export var effects: Array[EffectResource] = []
 @export var trigger: Trigger = Trigger.ON_DRAW
-var tags: Array[String] = []
 
 var source_deck_id: String = ""
 var card_id: String = ""
+var target_desc: String = ""
 
 @export var card_name: String = ""
 @export var icon: Texture2D
-@export var target_desc: String = "target_desc"
 @export var effect_description: String = "Does a thing"
 
 

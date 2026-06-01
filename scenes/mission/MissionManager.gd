@@ -30,6 +30,9 @@ func player_panel_assembly(decks: Dictionary) -> void:
 		d.draw_request.connect(_on_draw_request)
 
 func load_encounter(encounter: EncounterResource) -> void:
+	if encounter == null:
+		push_warning("load_encounter: encounter is null")
+		return
 	for child in encounter_space.get_children():
 		child.queue_free()
 	var instance = encounter_scene.instantiate()
@@ -41,10 +44,11 @@ func _on_draw_request(deck: Deck) -> void:
 	if is_queue_full():
 		return
 	var card = deck.draw_card()
-	if card:
-		# add an if here later my boi
+	if card == null:
+		return
+	if card.trigger == CardResource.Trigger.ON_DRAW:
 		resolve_effects(card)
-		queue.add_card(card)
+	queue.add_card(card)
 
 func _on_discard(card: CardResource) -> void:
 	for child in deck_container.get_children():

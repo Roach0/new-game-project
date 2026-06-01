@@ -1,11 +1,6 @@
 class_name EffectResource
 extends Resource
 
-@export var effect_id: String
-@export var target: Target
-
-func _tick() -> void:
-	pass
 
 enum Target {
 	PLAYER = 0,
@@ -16,4 +11,8 @@ enum Target {
 	ENCOUNTER_POS = 5
 }
 
-var tags: Array[String] = []
+@export var effect_id: String
+@export var target: Target
+
+func _tick() -> void:
+	pass
