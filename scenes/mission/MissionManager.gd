@@ -83,3 +83,7 @@ func get_effect_targets(target: EffectResource.Target) -> Array:
 		_:
 			push_warning("get_effect_targets: unhandled target type %d" % target)
 			return []
+
+
+func _on_action_button_pressed() -> void:
+	pass # Replace with function body.
