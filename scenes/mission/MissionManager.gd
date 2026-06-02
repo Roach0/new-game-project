@@ -46,9 +46,10 @@ func _on_draw_request(deck: Deck) -> void:
 	var card = deck.draw_card()
 	if card == null:
 		return
+	var queue_node = queue.add_card(card)
 	if card.trigger == CardResource.Trigger.ON_DRAW:
-		resolve_effects(card)
-	queue.add_card(card)
+		resolve_effects(card, queue_node) # pass entity here later
+	
 
 func _on_discard(card: CardResource) -> void:
 	for child in deck_container.get_children():
@@ -56,6 +57,9 @@ func _on_discard(card: CardResource) -> void:
 			child.discard(card)
 			return
 	push_warning("MissionManager: no deck found for source_deck_id '%s'" % card.source_deck_id)
+
+func _on_action_button_pressed() -> void:
+	pass # Replace with function body.
 
 # methods
 func remove_deck(deck_id: String) -> void:
@@ -65,35 +69,35 @@ func remove_deck(deck_id: String) -> void:
 			child.queue_free()
 			break
 
-func resolve_effects(card: CardResource) -> void:
+func resolve_effects(card: CardResource, queue_node: QueueSlot) -> void:
 	if card.effects.is_empty():
 		push_warning("resolve_effects: no effects on card '%s'" % card.card_name)
 		return
 	for effect in card.effects:
-		var targets := get_effect_targets(effect.target)
-		print(targets)
-		for target in targets:
-			effect.tick(target)
+		var target := get_effect_targets(effect.target, queue_node)
+		print(target)
+		for t in target:
+			effect.tick(t)
 
-func get_effect_targets(target: EffectResource.Target) -> Array:
-	print("target enum value: ", target)
-	match target:
+func get_effect_targets(
+	target_type: EffectResource.Target,
+	queue_node: QueueSlot = null,
+	) -> Array:
+	
+	print("target enum value: ", target_type)
+	match target_type:
 		EffectResource.Target.PLAYER:
 			return [player]
 		EffectResource.Target.SELF:
-			return []  # current endpoint
+			return[queue_node]
 		EffectResource.Target.QUEUE_GROUP:
-			return []  # current endpoint
-		EffectResource.Target.QUEUE_POS:
-			return []  # current endpoint
-		EffectResource.Target.ENCOUNTER_GROUP:
-			return []  # current endpoint
-		EffectResource.Target.ENCOUNTER_POS:
-			return []  # current endpoint
-		_:
-			push_warning("get_effect_targets: unhandled target type %d" % target)
 			return []
-
-
-func _on_action_button_pressed() -> void:
-	pass # Replace with function body.
+		EffectResource.Target.QUEUE_POS:
+			return []
+		EffectResource.Target.ENCOUNTER_GROUP:
+			return []
+		EffectResource.Target.ENCOUNTER_POS:
+			return []
+		_:
+			push_warning("get_effect_targets: unhandled target type %d" % target_type)
+			return []

@@ -5,6 +5,7 @@ class_name QueueSlot
 
 @export var drop_offset: Vector2 = Vector2(0, -300)
 @export var duration: float = 0.55
+var button = QueueSlotButton
 
 var card: CardResource = null
 var _active_tween: Tween = null

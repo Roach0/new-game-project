@@ -44,13 +44,14 @@ func is_full() -> bool:
 
 
 # methods - take care, tracking card data in two places here, pull card data here later?
-func add_card(card: CardResource) -> void:
+func add_card(card: CardResource) -> QueueSlot:
 	if is_full():
 		queue_is_full.emit()
 		return
 	var next = next_open_slot()
 	var slot = next[0]
 	var button = next[1]
+	slot.button = button
 	if slot:
 		slot.assign(card)
 		var target_str = ", ".join(card.effects.map(
@@ -58,6 +59,7 @@ func add_card(card: CardResource) -> void:
 		button.update(target_str, CardResource.trigger_label(card.trigger), card.effect_description)
 		button.mouse_filter = Control.MOUSE_FILTER_STOP
 		button.modulate.a = 1.0
+	return slot
 
 func remove_card(button:Button) -> void: # might not be updated to clear button labels
 	var b = button.name.lstrip("Button")
