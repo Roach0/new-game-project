@@ -82,7 +82,13 @@ func get_effect_targets(target: EffectResource.Target) -> Array:
 			return [player]
 		EffectResource.Target.SELF:
 			return []  # current endpoint
-#		EffectResource.Target.ENCOUNTER:
+		EffectResource.Target.QUEUE_GROUP:
+			return []  # current endpoint
+		EffectResource.Target.QUEUE_POS:
+			return []  # current endpoint
+		EffectResource.Target.ENCOUNTER_GROUP:
+			return []  # current endpoint
+		EffectResource.Target.ENCOUNTER_POS:
 			return []  # current endpoint
 		_:
 			push_warning("get_effect_targets: unhandled target type %d" % target)
