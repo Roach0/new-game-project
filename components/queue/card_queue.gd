@@ -61,7 +61,7 @@ func add_card(card: CardResource) -> QueueSlot:
 		button.modulate.a = 1.0
 	return slot
 
-func remove_card(button:Button) -> void: # might not be updated to clear button labels
+func remove_card(button:Button) -> void:
 	var b = button.name.lstrip("Button")
 	var s = get_node("VBoxContainer/CardQueue/Slot" + b)
 	var card = s.card
