@@ -1,6 +1,7 @@
 class_name EffectResource
 extends Resource
 
+# don'e use this class for effects, extend from a trigger specific variant.
 
 enum Target {
 	PLAYER = 0,
