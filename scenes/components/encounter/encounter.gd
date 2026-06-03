@@ -5,7 +5,7 @@ class_name Encounter
 @onready var top_row = $TopRow
 @onready var bot_row = $BotRow
 
-var character_slot = preload("res://components/character_slot/character_slot.tscn")
+var character_slot = preload("res://scenes/components/character_slot/character_slot.tscn")
 
 func assemble_encounter(encounter:EncounterResource) -> void:
 	for c in encounter.characters:

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bwi3f03vnopsn"]
 
 [ext_resource type="Script" uid="uid://c3sh3redtpkft" path="res://scenes/mission/MissionManager.gd" id="1_fmubs"]
-[ext_resource type="PackedScene" uid="uid://d0jar4dpikg7l" path="res://components/queue/card_queue.tscn" id="2_fmubs"]
+[ext_resource type="PackedScene" uid="uid://d0jar4dpikg7l" path="res://scenes/components/queue/card_queue.tscn" id="2_fmubs"]
 [ext_resource type="Script" uid="uid://b103p7xpirkkf" path="res://scenes/mission/player.gd" id="3_xorw8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ewe2u"]

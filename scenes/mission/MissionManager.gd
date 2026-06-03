@@ -5,8 +5,8 @@ extends Node
 @onready var encounter_space = $MarginContainer/Layout/EncounterSpace
 @onready var player = $MarginContainer/Layout/PlayerPanel/sep3/Player
 
-var deck_scene = preload("res://components/deck/deck.tscn")
-var encounter_scene = preload("res://components/encounter/encounter.tscn")
+var deck_scene = preload("res://scenes/components/deck/deck.tscn")
+var encounter_scene = preload("res://scenes/components/encounter/encounter.tscn")
 
 func _ready():
 	queue.discard.connect(_on_discard)

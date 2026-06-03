@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b68ke838cjr7b"]
 
-[ext_resource type="Script" uid="uid://yyywme8y3taq" path="res://components/queue/queue_slot.gd" id="1_e7y77"]
+[ext_resource type="Script" uid="uid://yyywme8y3taq" path="res://scenes/components/queue/queue_slot.gd" id="1_e7y77"]
 [ext_resource type="Texture2D" uid="uid://cjvsfvwdm7y3h" path="res://assets/slot_icons/RPG_Stat_Strength_Fist_Melee_Attack.png" id="2_g17gj"]
 
 [node name="QueueSlot" type="AspectRatioContainer" unique_id=1992712346]

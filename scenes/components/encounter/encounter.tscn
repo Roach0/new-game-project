@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dv4r6xkav2518"]
 
-[ext_resource type="Script" uid="uid://cl6k0oivbjbjg" path="res://components/encounter/encounter.gd" id="1_sq4sy"]
+[ext_resource type="Script" uid="uid://cl6k0oivbjbjg" path="res://scenes/components/encounter/encounter.gd" id="1_sq4sy"]
 
 [node name="Encounter" type="VBoxContainer" unique_id=1512536903]
 anchors_preset = 15

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bog43mnw2kcp4"
-path="res://.godot/imported/Character_21_Police.fbx-7f793a86683e2784e2b397be903cc3e8.scn"
+path="res://.godot/imported/Character_21_Police.fbx-ac6b150d87004425739365ea17f949e8.scn"
 
 [deps]
 
-source_file="res://components/viewport_3d/models/Character_21_Police.fbx"
-dest_files=["res://.godot/imported/Character_21_Police.fbx-7f793a86683e2784e2b397be903cc3e8.scn"]
+source_file="res://scenes/components/viewport_3d/models/Character_21_Police.fbx"
+dest_files=["res://.godot/imported/Character_21_Police.fbx-ac6b150d87004425739365ea17f949e8.scn"]
 
 [params]
 
@@ -41,7 +41,7 @@ _subresources={
 "materials": {
 "Character_21_Police": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://components/viewport_3d/models/Character_21_Police.tres",
+"use_external/fallback_path": "res://scenes/components/viewport_3d/models/Character_21_Police.tres",
 "use_external/path": "uid://lfpqnva6jx75"
 }
 }
