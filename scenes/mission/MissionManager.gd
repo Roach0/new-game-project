@@ -12,7 +12,7 @@ func _ready():
 	queue.discard.connect(_on_discard)
 	player_panel_assembly(Global.current_decks)
 	load_encounter(Global.next_encounter)
-
+	init_effects_controller(queue,player,encounter_space)
  
 # queries
 func is_queue_full() -> bool:
@@ -41,8 +41,10 @@ func load_encounter(encounter: EncounterResource) -> void:
 	encounter_space.add_child(instance)
 	instance.assemble_encounter(encounter)
 
-func init_effects_controller(queue, encounter_space, player):
-		EffectsController.card_queue = queue
+func init_effects_controller(queue, player, encounter_space):
+	EffectsController.card_queue = queue
+	EffectsController.player = player
+	EffectsController.encounter_space = encounter_space
 
 
 # handlers
