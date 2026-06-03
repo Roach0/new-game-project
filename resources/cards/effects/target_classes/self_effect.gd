@@ -1,5 +1,5 @@
 extends EffectResource
-class_name DrawEffect
+class_name SelfEffect
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
